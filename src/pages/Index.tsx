@@ -9,6 +9,9 @@ import serviceRegistration from "@/assets/service-registration.jpg";
 import serviceLegal from "@/assets/service-legal.jpg";
 import serviceFinance from "@/assets/service-finance.jpg";
 import serviceWealth from "@/assets/service-wealth.jpg";
+import serviceVirtual from "@/assets/service-virtual.jpg";
+import serviceDocument from "@/assets/service-document.jpg";
+import serviceElderly from "@/assets/service-elderly.jpg";
 
 const imageMap: Record<string, string> = {
   "service-property": serviceProperty,
@@ -18,6 +21,9 @@ const imageMap: Record<string, string> = {
   "service-legal": serviceLegal,
   "service-finance": serviceFinance,
   "service-wealth": serviceWealth,
+  "service-virtual": serviceVirtual,
+  "service-document": serviceDocument,
+  "service-elderly": serviceElderly,
 };
 
 const stats = [
@@ -39,19 +45,29 @@ const Index = () => {
             <Shield className="h-4 w-4 text-gold" />
             <span className="text-sm text-gold font-medium">Government & FEMA Registered</span>
           </div>
+          <p className="text-gold text-sm font-semibold tracking-wider uppercase mb-4 animate-fade-up">
+            BLV GLOBAL NRI ASSET MANAGEMENT PVT. LTD
+          </p>
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up-delay-1">
-            Managing Your Indian Assets.{" "}
-            <span className="text-gold">Securing Your Global Peace of Mind.</span>
+            Your Trusted Partner for{" "}
+            <span className="text-gold">End-to-End NRI Property & Asset Management</span>{" "}
+            in India
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/70 max-w-3xl mx-auto mb-10 animate-fade-up-delay-2">
-            End-to-end NRI asset & property management — professional, transparent, and legally compliant.
+          <p className="text-lg md:text-xl text-primary-foreground/70 max-w-3xl mx-auto mb-4 animate-fade-up-delay-2">
+            Managing property, legal documentation, and financial responsibilities in India while living abroad can be complex, uncertain, and time-consuming.
+          </p>
+          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-6 animate-fade-up-delay-2 font-medium">
+            BLV Global bridges this gap — acting as your trusted, authorized on-ground representative, ensuring your assets are secure, compliant, and professionally managed.
+          </p>
+          <p className="text-gold font-serif text-2xl md:text-3xl font-bold mb-10 animate-fade-up-delay-2">
+            Your Property. Our Responsibility.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-delay-2">
             <Link
               to="/contact"
               className="px-8 py-4 rounded-xl font-semibold gold-gradient text-accent-foreground hover:opacity-90 transition-all gold-glow text-base"
             >
-              Book Consultation
+              Contact Us
             </Link>
             <Link
               to="/services"
@@ -83,8 +99,11 @@ const Index = () => {
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mt-3 mb-6">
               Your Trusted Partner in India
             </h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
-              BLV Global NRI Asset Management Pvt. Ltd. is a professionally managed, Government-registered and FEMA-compliant company, exclusively dedicated to serving NRIs and global investors with assets in India.
+            <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed mb-4">
+              BLV Global NRI Asset Management Pvt. Ltd. is a professionally managed, Government-registered and FEMA-compliant company dedicated exclusively to Non-Resident Indians (NRIs) and global investors.
+            </p>
+            <p className="text-foreground max-w-3xl mx-auto text-base leading-relaxed font-medium">
+              We don't operate as brokers. We act as responsible custodians of your assets, delivering transparency, accountability, and complete peace of mind — no matter where you are in the world.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-10">

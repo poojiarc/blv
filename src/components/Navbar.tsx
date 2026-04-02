@@ -50,6 +50,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="BLV Global" className="h-14 w-auto rounded" />
+            <div className="hidden sm:block">
+              <span className="text-primary-foreground font-serif font-bold text-sm leading-tight block">BLV Global NRI</span>
+              <span className="text-gold text-xs font-medium leading-tight block">Asset Management</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -107,12 +111,6 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Link
-              to="/contact"
-              className="ml-4 px-5 py-2.5 rounded-lg text-sm font-semibold gold-gradient text-accent-foreground hover:opacity-90 transition-opacity"
-            >
-              Book Consultation
-            </Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -166,14 +164,6 @@ const Navbar = () => {
               )}
             </div>
           ))}
-          <div className="px-6 pt-2">
-            <Link
-              to="/contact"
-              className="block text-center px-5 py-2.5 rounded-lg text-sm font-semibold gold-gradient text-accent-foreground"
-            >
-              Book Consultation
-            </Link>
-          </div>
         </div>
       )}
     </nav>

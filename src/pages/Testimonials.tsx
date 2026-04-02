@@ -1,95 +1,149 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import testimonialPraveen from "@/assets/testimonial-praveen.png";
+import testimonialSubramanyam from "@/assets/testimonial-subramanyam.png";
+import testimonialRohit from "@/assets/testimonial-rohit.png";
 
 interface Testimonial {
   name: string;
   role: string;
+  category: string;
   review: string;
   gender: "male" | "female";
+  image?: string;
 }
 
 const testimonials: Testimonial[] = [
   {
-    name: "Rajesh Kumar",
-    role: "NRI - USA",
-    review: "BLV Global managed my property registration in Hyderabad flawlessly. Their single point of contact approach saved me from dealing with multiple agents. Highly professional and trustworthy.",
+    name: "M. Praveen Chakravarthy",
+    role: "Chicago, USA – Renowned Immigration Attorney",
+    category: "Property Purchase – Trust & Transparency",
+    review: "I approached BLV Global NRI for my real estate property transaction in Hyderabad, and the entire process was handled with utmost professionalism. Their clear guidance, strong legal expertise, and efficient coordination with government authorities made everything completely hassle-free. I highly recommend BLV Global NRI for reliable and seamless real estate transactions.",
+    gender: "male",
+    image: testimonialPraveen,
+  },
+  {
+    name: "Sandeep Varma",
+    role: "Entrepreneur | London, UK",
+    category: "Commercial Property Investment",
+    review: "Purchasing a commercial property in Visakhapatnam while being overseas can be challenging, but BLV Global NRI made it effortless. Their strong local network, thorough due diligence, and transparent approach gave me complete confidence. They handled everything—from property verification to final registration—with absolute precision. Today, I am a peaceful owner enjoying strong rental returns.",
     gender: "male",
   },
   {
-    name: "Priya Sharma",
-    role: "NRI - UK",
-    review: "I was worried about managing my inherited property from London. BLV Global handled everything — from documentation to compliance. Their transparency and regular updates gave me complete peace of mind.",
+    name: "Anusha Devi",
+    role: "Software Engineer | Sydney, Australia",
+    category: "Legal & Documentation Excellence",
+    review: "What impressed me the most was their deep knowledge of legal processes and documentation. BLV Global NRI ensured my property transaction was legally secure and well-structured. Their attention to detail and clarity at every step truly set them apart in real estate advisory.",
     gender: "female",
   },
   {
-    name: "Suresh Reddy",
-    role: "NRI - UAE",
-    review: "The GPA and SPA services from BLV Global were exceptional. They coordinated everything with the embassy and registrar office. I didn't have to travel to India even once. Truly reliable.",
+    name: "Karthik Narayan",
+    role: "Software Developer | New Jersey, USA",
+    category: "Custodian of Original Documents",
+    review: "Entrusting original property documents was not easy, especially back in 2019. But Mr. Vagesh Datt and the team proved to be highly dependable custodians. Their secure handling, systematic documentation, and accountability gave me complete peace of mind. A truly professional and trustworthy team.",
     gender: "male",
   },
   {
-    name: "Anitha Venkatesh",
-    role: "NRI - Australia",
-    review: "What sets BLV apart is their engineering background — they inspect properties with a technical eye that no broker can match. My family's ancestral property is in safe hands now.",
-    gender: "female",
-  },
-  {
-    name: "Karthik Naidu",
-    role: "NRI - Canada",
-    review: "BLV Global helped me sell my property in Secunderabad with complete FEMA compliance. The process was smooth, documented, and professionally handled. I recommend them to every NRI.",
+    name: "Harish Chandra Devireddy",
+    role: "Toronto, Canada",
+    category: "Finance Management & Advisory",
+    review: "BLV Global NRI not only managed my property transaction but also guided me through the financial aspects with clarity. Their structured approach to fund management, compliance, and remittances made the entire process smooth and efficient.",
     gender: "male",
   },
   {
-    name: "Meena Rao",
-    role: "NRI - Germany",
-    review: "Their financial and tax assistance for NRI properties is outstanding. They guided me through the entire repatriation process and ensured everything was legally compliant.",
+    name: "Meghana Reddy",
+    role: "Architect | Singapore",
+    category: "Buyer & Seller Handling Expertise",
+    review: "Their ability to handle both buyers and sellers with professionalism is remarkable. BLV Global NRI ensured genuine negotiations, fair value, and a smooth closure. Their market understanding and strong network truly reflect their credibility.",
     gender: "female",
+  },
+  {
+    name: "Trivikram Reddy",
+    role: "Dallas, USA",
+    category: "Full-Time Support Across Time Zones",
+    review: "Despite the time difference, BLV Global NRI was always available and responsive. Their commitment to providing support across time zones made communication effortless. I never felt disconnected from the process.",
+    gender: "male",
+  },
+  {
+    name: "Arjun Rao Raagam",
+    role: "Dubai, UAE",
+    category: "Complete NRI Property Management",
+    review: "BLV Global NRI offers a complete ecosystem for NRIs—from property acquisition and legal verification to documentation, custody, and transaction management. Their strong local presence and professional execution make them a one-stop solution for real estate in India.",
+    gender: "male",
+  },
+  {
+    name: "Naveen Goud Cherukuri",
+    role: "Melbourne, Australia",
+    category: "Strong Local Network & Execution",
+    review: "Their strong local network and on-ground presence played a key role in closing my transaction efficiently. BLV Global NRI combines market intelligence with execution excellence, making them a trusted partner for any real estate requirement.",
+    gender: "male",
+  },
+  {
+    name: "Sowmya Iyer",
+    role: "Bangalore / Singapore",
+    category: "Investment to Income – Seamless Execution",
+    review: "What stood out was their ability to convert my property investment into a fully managed rental asset. From selection to interiors and tenant management, everything was handled professionally. I now receive consistent rental income with complete peace of mind.",
+    gender: "female",
+  },
+  {
+    name: "Chelaram Chowdary",
+    role: "Dubai, UAE",
+    category: "Premium Property Management Experience",
+    review: "BLV Global NRI delivered a complete premium experience—from identifying a high-rise gated community apartment to executing interiors and managing tenants. Their proactive updates and smooth rental handling make them highly dependable.",
+    gender: "male",
+  },
+  {
+    name: "G. Rohit Rao",
+    role: "Software Engineer | Dallas, USA",
+    category: "Complete Turnkey Experience",
+    review: "From finding the perfect apartment to completing interiors and placing a reliable tenant, BLV Global NRI handled everything end-to-end. Their structured approach and regular management ensure I receive rental income smoothly every month without any involvement.",
+    gender: "male",
+    image: testimonialRohit,
+  },
+  {
+    name: "Raaman Iyer",
+    role: "Sailam, Tamil Nadu / Dubai, UAE",
+    category: "Dispute to Closure – Complete Authority",
+    review: "What started as a stressful property dispute was transformed into a well-managed process once Mr. Vagesh Datt took over through GPA. His ability to handle court matters, legal documentation, and on-ground coordination ensured a timely and effective resolution. Highly recommended for critical property matters.",
+    gender: "male",
+  },
+  {
+    name: "Subramanyam Mallik K.",
+    role: "New Jersey, USA",
+    category: "Complex Dispute – Strategic Resolution",
+    review: "I was facing a long-pending and complex property dispute in Hyderabad involving multiple legal complications. After granting General Power of Attorney to Mr. P. Vagesh Datt, the entire matter was handled with strategic clarity and authority. From court proceedings to documentation and stakeholder coordination, every aspect was managed professionally. The issue was resolved efficiently without my physical presence. A truly dependable and result-driven approach.",
+    gender: "male",
+    image: testimonialSubramanyam,
   },
 ];
 
 const faqs = [
   {
-    q: "What exactly does BLV Global do?",
-    a: "BLV Global is a Government and FEMA-registered NRI Asset Management company. We act as your authorized on-ground representative in India, managing property transactions, legal documentation, compliance, registrations, and asset oversight on your behalf.",
+    q: "What does BLV Global do?",
+    a: "We manage property, legal, compliance, and transactions for NRIs as their authorized representative.",
   },
   {
-    q: "Are you a real estate broker or agent?",
-    a: "No. We are not brokers. We are a professional asset and compliance management company. Our role is responsibility, execution, and compliance — not commissions or quick transactions.",
+    q: "Are you brokers?",
+    a: "No. We are professional asset managers focused on responsibility and compliance.",
   },
   {
-    q: "Can BLV act on my behalf legally while I am abroad?",
-    a: "Yes. Through a properly drafted and registered GPA (General Power of Attorney) or SPA (Special Power of Attorney), we legally represent NRIs for property and asset-related activities in India.",
+    q: "Is it FEMA compliant?",
+    a: "Yes. All services strictly follow FEMA and Indian laws.",
   },
   {
-    q: "Do I need to travel to India for registrations or documentation?",
+    q: "Can you act on my behalf?",
+    a: "Yes, through GPA / SPA.",
+  },
+  {
+    q: "Do I need to travel to India?",
     a: "In most cases, no. We coordinate Notary, Apostille, Embassy attestation, POA registration, and execution so that transactions can be completed remotely.",
   },
   {
-    q: "Do you manage rental properties or tenants?",
-    a: "No. We do not offer rental management. Our specialization is asset protection, legal compliance, documentation, and transaction execution.",
+    q: "Do you manage rentals?",
+    a: "No. We focus on asset protection and transactions.",
   },
   {
-    q: "Can you help with buying or selling property in India?",
-    a: "Yes. We assist with property identification, due diligence, title verification, negotiation, registration, and sale execution, ensuring compliance and risk mitigation.",
-  },
-  {
-    q: "Do you handle inherited or ancestral properties?",
-    a: "Yes. We support NRIs with inherited assets, joint ownership issues, documentation rectification, and structured asset resolution.",
-  },
-  {
-    q: "How do I stay updated if I am abroad?",
-    a: "We provide digital documentation access, photo & video updates, online approvals, and periodic status reports. You remain informed and in control at every stage.",
-  },
-  {
-    q: "Is there transparency in costs and documentation?",
-    a: "Yes. All activities are clearly documented, approvals are taken in advance, and execution is done only as per mandate.",
-  },
-  {
-    q: "Why should I trust BLV with my assets?",
-    a: "Because we offer Government & FEMA registration, 7+ years of professional experience, 70+ completed NRI projects, single point of accountability, and ethical, process-driven execution.",
-  },
-  {
-    q: "How do we start working with BLV Global?",
-    a: "You can begin with an initial consultation, where we understand your asset structure and advise the best compliant way forward.",
+    q: "How do I track progress?",
+    a: "Through digital reports, photos, and direct communication. NRIs remain informed and in control — from anywhere in the world.",
   },
 ];
 
@@ -111,14 +165,28 @@ const Testimonials = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <div key={i} className="glass-card p-6 hover:scale-[1.02] transition-transform">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-2xl border-2 border-gold/20">
-                  {t.gender === "male" ? "👨" : "👩"}
-                </div>
+              <div className="flex items-center gap-4 mb-3">
+                {t.image ? (
+                  <img
+                    src={t.image}
+                    alt={t.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-gold/20"
+                    loading="lazy"
+                    width={56}
+                    height={56}
+                  />
+                ) : (
+                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-2xl border-2 border-gold/20">
+                    {t.gender === "male" ? "👨" : "👩"}
+                  </div>
+                )}
                 <div>
                   <h4 className="font-serif font-semibold text-foreground">{t.name}</h4>
-                  <p className="text-sm text-gold">{t.role}</p>
+                  <p className="text-xs text-muted-foreground">{t.role}</p>
                 </div>
+              </div>
+              <div className="inline-block px-2 py-0.5 rounded-full bg-gold/10 border border-gold/20 text-gold text-[10px] font-medium mb-3">
+                {t.category}
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed italic">"{t.review}"</p>
             </div>

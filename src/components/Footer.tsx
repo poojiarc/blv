@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import { Heart, Phone, Mail, MapPin, Home, Info, Wrench, MessageSquare } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -7,7 +8,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto section-padding">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="font-serif text-xl text-primary-foreground mb-4">BLV Global</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="BLV Global" className="h-12 w-auto rounded" />
+              <div>
+                <span className="text-primary-foreground font-serif font-bold text-sm leading-tight block">BLV Global NRI</span>
+                <span className="text-gold text-xs font-medium leading-tight block">Asset Management Pvt. Ltd.</span>
+              </div>
+            </div>
             <p className="text-sm leading-relaxed text-primary-foreground/60">
               Your Trusted Partner for End-to-End NRI Property & Asset Management in India.
             </p>
@@ -19,17 +26,18 @@ const Footer = () => {
             <h4 className="font-serif text-lg text-primary-foreground mb-4">Quick Links</h4>
             <div className="flex flex-col gap-2">
               {[
-                { label: "Home", path: "/" },
-                { label: "About Us", path: "/about" },
-                { label: "Services", path: "/services" },
-                { label: "Testimonials", path: "/testimonials" },
-                { label: "Contact", path: "/contact" },
+                { label: "Home", path: "/", icon: Home },
+                { label: "About Us", path: "/about", icon: Info },
+                { label: "Services", path: "/services", icon: Wrench },
+                { label: "Testimonials", path: "/testimonials", icon: MessageSquare },
+                { label: "Contact", path: "/contact", icon: Phone },
               ].map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-sm text-primary-foreground/60 hover:text-gold transition-colors"
+                  className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-gold transition-colors"
                 >
+                  <link.icon className="h-3.5 w-3.5" />
                   {link.label}
                 </Link>
               ))}
