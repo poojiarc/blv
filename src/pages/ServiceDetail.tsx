@@ -8,6 +8,9 @@ import serviceRegistration from "@/assets/service-registration.jpg";
 import serviceLegal from "@/assets/service-legal.jpg";
 import serviceFinance from "@/assets/service-finance.jpg";
 import serviceWealth from "@/assets/service-wealth.jpg";
+import serviceVirtual from "@/assets/service-virtual.jpg";
+import serviceDocument from "@/assets/service-document.jpg";
+import serviceElderly from "@/assets/service-elderly.jpg";
 
 const imageMap: Record<string, string> = {
   "service-property": serviceProperty,
@@ -17,6 +20,9 @@ const imageMap: Record<string, string> = {
   "service-legal": serviceLegal,
   "service-finance": serviceFinance,
   "service-wealth": serviceWealth,
+  "service-virtual": serviceVirtual,
+  "service-document": serviceDocument,
+  "service-elderly": serviceElderly,
 };
 
 const ServiceDetail = () => {
@@ -80,7 +86,7 @@ const ServiceDetail = () => {
               to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold gold-gradient text-accent-foreground hover:opacity-90 transition-all gold-glow"
             >
-              Get Started — Book a Consultation
+              Contact Us
             </Link>
           </div>
         </div>
