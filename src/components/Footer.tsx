@@ -37,7 +37,7 @@ const Footer = () => {
                   to={link.path}
                   className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-gold transition-colors"
                 >
-                  <link.icon className="h-3.5 w-3.5" />
+                  <link.icon className="h-4 w-4 text-gold" />
                   {link.label}
                 </Link>
               ))}
@@ -60,22 +60,32 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 text-center">
-          <div className="flex justify-center items-center gap-1 text-sm text-primary-foreground/50 mb-2">
-            Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" /> by
-            <a
-              href="https://staffarc.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold hover:underline ml-1 font-medium"
-            >
-              StaffArc
-            </a>
-          </div>
-          <p className="text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} BLV Global NRI Asset Management Pvt. Ltd. All rights reserved.
-          </p>
-        </div>
+        <div className="border-t border-primary-foreground/10 pt-6 text-center">
+  
+  {/* Made with section */}
+  <div className="flex justify-center items-center gap-1 text-sm text-primary-foreground/50 mb-2">
+    Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" /> by
+    <a
+      href="https://staffarc.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-1 text-orange-600 hover:underline ml-1"
+    >
+      <img
+        src="https://www.staffarc.in/images/Staffarc-logo.png"
+        alt="StaffArc logo"
+        className="h-5 w-5 object-contain"
+      />
+      StaffArc
+    </a>
+  </div>
+
+  {/* Copyright */}
+  <p className="text-xs text-primary-foreground/40">
+    © {new Date().getFullYear()} BLV Global NRI Asset Management Pvt. Ltd. All rights reserved.
+  </p>
+
+</div>
       </div>
     </footer>
   );
