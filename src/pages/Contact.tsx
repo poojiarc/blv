@@ -31,7 +31,7 @@ const Contact = () => {
               {[
                 { icon: Phone, label: "Phone", value: "+91 9966799225", href: "tel:+919966799225" },
                 { icon: Mail, label: "Email", value: "blvglobalnri@gmail.com", href: "mailto:blvglobalnri@gmail.com" },
-                { icon: Clock, label: "Business Hours", value: "10:00 AM – 8:00 PM (All Weekdays)", href: "#" },
+                { icon: Clock, label: "Business Hours", value: "10:00 AM – 8:00 PM (All Days)", href: "#" },
               ].map((item) => (
                 <a
                   key={item.label}
@@ -58,12 +58,12 @@ const Contact = () => {
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Office Address</p>
                   <p className="text-foreground font-medium text-sm leading-relaxed">
-                    PVR VAGESH DATT (DATTU)<br />
+                    PVR VAGESH DATT<br />
                     Plot No-9-4-37, Flat No-202<br />
                     Chamundeshwari Residency,<br />
                     Lions Town Colony, Hasmathpet,<br />
-                    Old-Bowenpally, Secunderabad,<br />
-                    Telangana, India – 500009
+                    Old Bowenpally, Secunderabad,<br />
+                    Telangana – 500009
                   </p>
                 </div>
               </div>

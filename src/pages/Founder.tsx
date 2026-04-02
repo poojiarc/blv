@@ -1,4 +1,5 @@
-import founderImg from "@/assets/founder-placeholder.jpg";
+import founderVagesh from "@/assets/founder-vagesh.png";
+import founderGanesh from "@/assets/founder-ganesh.png";
 
 interface FounderInfo {
   name: string;
@@ -7,6 +8,7 @@ interface FounderInfo {
   image: string;
   experience: string[];
   bio: string;
+  story?: string[];
 }
 
 const founders: FounderInfo[] = [
@@ -14,26 +16,34 @@ const founders: FounderInfo[] = [
     name: "PVR Vagesh Datt",
     title: "Founder & Managing Director",
     qualification: "B.Tech – Civil Engineering | M.Tech – Structural Engineering",
-    image: founderImg,
+    image: founderVagesh,
     experience: [
-      "Central Government, State Government & Private Construction Projects",
+      "Government & Private Construction Projects",
       "Infrastructure Development",
       "Interior Project Execution",
-      "End-to-End Property Management Services",
+      "End-to-End Property Management",
     ],
-    bio: "PVR Vagesh Datt is a qualified Civil and Structural Engineer with over 7 years of comprehensive experience. His professional journey includes delivering multiple high-value assignments with a focus on precision, compliance, and client satisfaction. Over the years, he has built a specialised and committed team that upholds professional standards, ethical practices, and transparent communication.",
+    bio: "With over 7+ years of experience, PVR Vagesh Datt combines engineering precision, legal awareness, and execution discipline. His professional journey includes delivering multiple high-value assignments with a focus on compliance and client satisfaction.",
+    story: [
+      "His journey did not begin as a business idea. It began with people.",
+      "Friends and family living abroad started reaching out — not for investments, but for trust. They had properties in India, but no one reliable to manage them. They felt uncertain, disconnected, and vulnerable.",
+      "He stepped in — personally. He visited sites, handled paperwork, coordinated processes, and ensured everything was done correctly. Not as a service — but as a responsibility.",
+      "For an NRI, property is not just land or investment. It is a lifetime of savings, a family legacy, a memory of home, a future they may return to. And what they needed most was not a broker — but someone who would stand in their place.",
+      "What started quietly grew through trust. By 2026, over 60+ NRI journeys had been successfully handled. BLV Global was built on one foundation: Trust backed by responsibility.",
+    ],
   },
   {
-    name: "Co-Founder",
-    title: "Co-Founder & Director",
-    qualification: "Details Coming Soon",
-    image: founderImg,
+    name: "P. Venkata Ganesh",
+    title: "Director",
+    qualification: "37+ Years of Corporate Experience",
+    image: founderGanesh,
     experience: [
-      "Strategic Business Development",
-      "NRI Client Relations",
-      "Operations & Compliance Management",
+      "Strategic Financial Planning & Advisory",
+      "Risk Management & Business Structuring",
+      "Complete Financial Framework Oversight",
+      "Long-Term Value Creation for Clients",
     ],
-    bio: "A dedicated professional bringing strategic vision and operational excellence to BLV Global's mission of serving NRIs with integrity and professionalism.",
+    bio: "Mr. P. Venkata Ganesh serves as the Director of BLV Global NRI Asset Management Private Limited, overseeing the company's entire financial framework. With over 37+ years of extensive corporate experience, he is a distinguished financial strategist and advisor, bringing deep expertise in financial planning, risk management, and business structuring. His strategic vision and financial acumen play a crucial role in driving the company's stability, growth, and long-term value for clients.",
   },
 ];
 
@@ -53,10 +63,7 @@ const Founder = () => {
       <section className="section-padding bg-background">
         <div className="max-w-5xl mx-auto space-y-16">
           {founders.map((founder, index) => (
-            <div
-              key={index}
-              className="glass-card overflow-hidden"
-            >
+            <div key={index} className="glass-card overflow-hidden">
               <div className="grid md:grid-cols-5 gap-0">
                 <div className="md:col-span-2 relative">
                   <img
@@ -88,6 +95,17 @@ const Founder = () => {
                   </ul>
                 </div>
               </div>
+              {/* Founder Story */}
+              {founder.story && (
+                <div className="p-8 border-t border-border">
+                  <h4 className="font-serif text-xl font-bold text-foreground mb-4">The Real Story Behind BLV Global</h4>
+                  <div className="space-y-3">
+                    {founder.story.map((para, i) => (
+                      <p key={i} className="text-muted-foreground leading-relaxed text-sm">{para}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
