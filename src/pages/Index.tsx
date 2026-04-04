@@ -37,46 +37,38 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img src={heroBg} alt="Indian cityscape" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-        <div className="hero-overlay absolute inset-0" />
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 py-32">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/5 backdrop-blur-sm mb-8 animate-fade-up">
-            <Shield className="h-4 w-4 text-gold" />
-            <span className="text-sm text-gold font-medium">Government & FEMA Registered</span>
-          </div>
-          <p className="text-gold text-sm font-semibold tracking-wider uppercase mb-4 animate-fade-up">
-            BLV GLOBAL NRI ASSET MANAGEMENT PVT. LTD
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src={heroBg} alt="Indian cityscape" className="absolute inset-0 w-full h-full object-cover scale-105" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-[hsl(var(--navy)/0.55)]" />
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
+          <p className="text-[hsl(var(--gold))] text-xs md:text-sm font-medium tracking-[0.35em] uppercase mb-8 animate-fade-up">
+            BLV Global NRI Asset Management Pvt. Ltd.
           </p>
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up-delay-1">
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary-foreground leading-[1.1] tracking-tight mb-8 animate-fade-up-delay-1">
             Your Trusted Partner for{" "}
-            <span className="text-gold">End-to-End NRI Property & Asset Management</span>{" "}
-            in India
+            <span className="text-gold italic">NRI Property</span>{" "}
+            & Asset Management
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/70 max-w-3xl mx-auto mb-4 animate-fade-up-delay-2">
-            Managing property, legal documentation, and financial responsibilities in India while living abroad can be complex, uncertain, and time-consuming.
-          </p>
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-6 animate-fade-up-delay-2 font-medium">
-            BLV Global bridges this gap — acting as your trusted, authorized on-ground representative, ensuring your assets are secure, compliant, and professionally managed.
-          </p>
-          <p className="text-gold font-serif text-2xl md:text-3xl font-bold mb-10 animate-fade-up-delay-2">
-            Your Property. Our Responsibility.
+          <p className="text-primary-foreground/60 text-base md:text-lg max-w-2xl mx-auto mb-12 animate-fade-up-delay-2 leading-relaxed">
+            End-to-end property, legal, and financial management in India — so you never have to worry from abroad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-delay-2">
             <Link
               to="/contact"
-              className="px-8 py-4 rounded-xl font-semibold gold-gradient text-accent-foreground hover:opacity-90 transition-all gold-glow text-base"
+              className="px-10 py-4 rounded-full font-semibold gold-gradient text-accent-foreground hover:opacity-90 transition-all text-sm tracking-wide uppercase"
             >
               Contact Us
             </Link>
             <Link
               to="/services"
-              className="px-8 py-4 rounded-xl font-semibold border-2 border-gold/40 text-primary-foreground hover:bg-gold/10 transition-all text-base"
+              className="px-10 py-4 rounded-full font-semibold border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 transition-all text-sm tracking-wide uppercase"
             >
               Explore Services
             </Link>
           </div>
         </div>
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Stats */}
