@@ -1,0 +1,31 @@
+import { useState, useEffect, ReactNode } from "react";
+
+interface FadeInProps {
+  children: ReactNode;
+  delay?: number;
+  duration?: number;
+  className?: string;
+}
+
+const FadeIn = ({ children, delay = 0, duration = 1000, className = "" }: FadeInProps) => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
+  return (
+    <div
+      className={`transition-opacity ${className}`}
+      style={{
+        opacity: visible ? 1 : 0,
+        transitionDuration: `${duration}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default FadeIn;
