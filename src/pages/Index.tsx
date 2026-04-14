@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Globe, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
 import { services } from "@/data/services";
-import heroBg from "@/assets/hero-bg.jpg";
+import AnimatedHeading from "@/components/AnimatedHeading";
+import FadeIn from "@/components/FadeIn";
 import serviceProperty from "@/assets/service-property.jpg";
 import serviceInvestment from "@/assets/service-investment.jpg";
 import serviceGpa from "@/assets/service-gpa.jpg";
@@ -33,42 +34,72 @@ const stats = [
   { value: "100%", label: "FEMA Compliant" },
 ];
 
+const HERO_VIDEO_URL = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4";
+
 const Index = () => {
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src={heroBg} alt="Indian cityscape" className="absolute inset-0 w-full h-full object-cover scale-105" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-[hsl(var(--navy)/0.55)]" />
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <p className="text-[hsl(var(--gold))] text-xs md:text-sm font-medium tracking-[0.35em] uppercase mb-8 animate-fade-up">
-            BLV Global NRI Asset Management Pvt. Ltd.
-          </p>
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-primary-foreground leading-[1.1] tracking-tight mb-8 animate-fade-up-delay-1">
-            Your Trusted Partner for{" "}
-            <span className="text-gold italic">NRI Property</span>{" "}
-            & Asset Management
-          </h1>
-          <p className="text-primary-foreground/60 text-base md:text-lg max-w-2xl mx-auto mb-12 animate-fade-up-delay-2 leading-relaxed">
-            End-to-end property, legal, and financial management in India — so you never have to worry from abroad.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-delay-2">
-            <Link
-              to="/contact"
-              className="px-10 py-4 rounded-full font-semibold gold-gradient text-accent-foreground hover:opacity-90 transition-all text-sm tracking-wide uppercase"
-            >
-              Contact Us
-            </Link>
-            <Link
-              to="/services"
-              className="px-10 py-4 rounded-full font-semibold border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 transition-all text-sm tracking-wide uppercase"
-            >
-              Explore Services
-            </Link>
+      <section className="relative h-screen overflow-hidden bg-black">
+        {/* Video Background — NO overlay */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={HERO_VIDEO_URL} type="video/mp4" />
+        </video>
+
+        {/* Hero Content — bottom-aligned */}
+        <div className="relative z-10 h-full flex flex-col px-6 md:px-12 lg:px-16">
+          <div className="flex-1 flex flex-col justify-end pb-12 lg:pb-16">
+            <div className="lg:grid lg:grid-cols-2 lg:items-end">
+              {/* Left Column */}
+              <div>
+                <AnimatedHeading
+                  text={"Your Property.\nOur Responsibility."}
+                  className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-4 font-sans"
+                  charDelay={30}
+                  initialDelay={200}
+                />
+
+                <FadeIn delay={800} duration={1000}>
+                  <p className="text-base md:text-lg text-gray-300 mb-5 max-w-xl" style={{ letterSpacing: '-0.01em' }}>
+                    We back NRIs with trusted on-ground representation — managing property, legal, and financial matters across India.
+                  </p>
+                </FadeIn>
+
+                <FadeIn delay={1200} duration={1000}>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      to="/contact"
+                      className="bg-white text-black px-8 py-3 rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors"
+                    >
+                      Get in Touch
+                    </Link>
+                    <Link
+                      to="/services"
+                      className="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium text-sm hover:bg-white hover:text-black transition-all duration-300"
+                    >
+                      Explore Services
+                    </Link>
+                  </div>
+                </FadeIn>
+              </div>
+
+              {/* Right Column — Tag */}
+              <FadeIn delay={1400} duration={1000} className="mt-8 lg:mt-0 flex items-end justify-start lg:justify-end">
+                <div className="liquid-glass border border-white/20 px-6 py-3 rounded-xl">
+                  <span className="text-lg md:text-xl lg:text-2xl font-light text-white">
+                    Property. Legal. Compliance.
+                  </span>
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </div>
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Stats */}
