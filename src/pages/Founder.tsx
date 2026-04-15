@@ -8,30 +8,47 @@ interface FounderInfo {
   image: string;
   experience: string[];
   bio: string;
+
+  description?: string;
+  leadership?: string;
+  credibility?: string;
+
   story?: string[];
 }
 
 const founders: FounderInfo[] = [
-  {
-    name: "PVR Vagesh Datt",
-    title: "Founder & Managing Director",
-    qualification: "B.Tech – Civil Engineering | M.Tech – Structural Engineering",
-    image: founderVagesh,
-    experience: [
-      "Government & Private Construction Projects",
-      "Infrastructure Development",
-      "Interior Project Execution",
-      "End-to-End Property Management",
-    ],
-    bio: "With over 7+ years of experience, PVR Vagesh Datt combines engineering precision, legal awareness, and execution discipline. His professional journey includes delivering multiple high-value assignments with a focus on compliance and client satisfaction.",
-    story: [
-      "His journey did not begin as a business idea. It began with people.",
-      "Friends and family living abroad started reaching out — not for investments, but for trust. They had properties in India, but no one reliable to manage them. They felt uncertain, disconnected, and vulnerable.",
-      "He stepped in — personally. He visited sites, handled paperwork, coordinated processes, and ensured everything was done correctly. Not as a service — but as a responsibility.",
-      "For an NRI, property is not just land or investment. It is a lifetime of savings, a family legacy, a memory of home, a future they may return to. And what they needed most was not a broker — but someone who would stand in their place.",
-      "What started quietly grew through trust. By 2026, over 60+ NRI journeys had been successfully handled. BLV Global was built on one foundation: Trust backed by responsibility.",
-    ],
-  },
+ {
+  name: "PVR Vagesh Datt",
+  title: "Founder & Managing Director",
+  qualification: "B.Tech – Civil Engineering | M.Tech – Structural Engineering",
+  image: founderVagesh,
+
+  experience: [
+    "Central & State Government Construction Projects",
+    "Private Construction Projects",
+    "Infrastructure Development",
+    "Interior Project Execution",
+    "End-to-End Property Management Services",
+  ],
+
+  bio: "PVR Vagesh Datt is a qualified Civil and Structural Engineer with over 8+ years of comprehensive experience across government, private, and infrastructure projects. His work is driven by precision, compliance, and a strong commitment to client satisfaction.",
+
+  description: "His professional journey includes delivering multiple high-value assignments across Central Government, State Government, and private sector projects. With a deep understanding of execution, compliance, and coordination, he ensures every project is handled with technical accuracy and accountability.",
+
+  leadership: "Over the years, he has built a specialised and committed team that operates with strong professional standards, ethical practices, and transparent communication.",
+
+  credibility: "His work has earned consistent appreciation from both Indian and NRI clients, establishing him as a reliable and responsible industry professional.",
+
+  story: [
+    "His journey did not begin as a business idea. It began with people.",
+    "Friends and family living abroad started reaching out — not for investments, but for trust. They had properties in India, but no one reliable to manage them.",
+    "He stepped in personally — visiting sites, handling documentation, coordinating processes, and ensuring everything was done correctly.",
+    "For an NRI, property is not just an asset — it is savings, legacy, emotion, and future security.",
+    "What they needed was not a broker, but someone who would stand in their place with responsibility.",
+    "What started quietly grew through trust, leading to 60+ successful NRI engagements.",
+    "BLV Global was built on one foundation: Trust backed by responsibility.",
+  ],
+},
   {
     name: "P. Venkata Ganesh",
     title: "Director",
@@ -56,7 +73,7 @@ const Founder = () => {
           Our Founders
         </h1>
         <p className="text-primary-foreground/70 max-w-2xl mx-auto text-lg">
-          The visionaries behind BLV Global's commitment to NRI asset protection and professional excellence.
+          The visionaries behind BLV Global stands for a global commitment to NRIs — Protecting Properties. Empowering Ownership. Delivering Excellence
         </p>
       </section>
 

@@ -25,7 +25,7 @@ export const services: ServiceData[] = [
   },
   {
     id: "buying-selling",
-    title: "Property Buying, Selling & Investment Advisory",
+    title: "Property Buying, Selling, Investment Advisory & Long term portfolio management",
     shortDescription: "Safe and profitable real estate decisions with risk mitigation and legal clarity.",
     image: "service-investment",
     description: "We assist NRIs in making safe and profitable real estate decisions. All transactions are executed with risk mitigation and legal clarity.",
@@ -51,6 +51,9 @@ export const services: ServiceData[] = [
       "Coordination with advocates, banks & government offices",
       "FEMA-compliant structuring of all transactions",
       "Non-litigation issue resolution",
+      "Litigation Solving- legal solutions",
+      "Court Cases/Disputes handling",
+      "Family litigations Handling & legal Clearances",
     ],
   },
   {
@@ -111,11 +114,12 @@ export const services: ServiceData[] = [
       "Photo & video documentation",
       "Condition assessment reports",
       "On-demand property walkthroughs",
+      "Geo Tagged photos & Videos"
     ],
   },
   {
     id: "document-management",
-    title: "Document Management",
+    title: "Documents Management",
     shortDescription: "Safe custody, scanning, indexing & secure handling of all property documents.",
     image: "service-document",
     description: "We provide comprehensive document management services ensuring your critical property documents are safely stored and easily accessible.",
@@ -130,7 +134,7 @@ export const services: ServiceData[] = [
   },
   {
     id: "nri-tax-filing",
-    title: "NRI Tax Filing & Issue Resolution",
+    title: "NRI Tax Filling & Is END TO END Financial Compliance",
     shortDescription: "Annual tax filing, capital gains guidance, and legal issue resolution.",
     image: "service-registration",
     description: "We provide comprehensive tax filing and issue resolution services for NRI property owners.",
@@ -145,7 +149,7 @@ export const services: ServiceData[] = [
   },
   {
     id: "elderly-support",
-    title: "Elderly Property Support",
+    title: "Senior Citizen Property Support",
     shortDescription: "Support for elderly property owners with documentation, payments & coordination.",
     image: "service-elderly",
     description: "We provide dedicated support for elderly property owners in India, handling documentation, payments, and coordination with regular updates to NRI families.",
@@ -158,4 +162,22 @@ export const services: ServiceData[] = [
       "Complete accountability and transparency",
     ],
   },
+   {
+  id: "End-to-End-Property-Management",
+  title: "END TO END Property Management",
+  shortDescription: "Complete property management covering documentation, maintenance, coordination, and compliance from start to finish.",
+  image: "service-end-to-end", // ✅ FIXED
+  description: "Comprehensive property management including documentation, maintenance, coordination, and legal compliance—all handled seamlessly.",
+  bullets: [
+    "Tenant management",
+    "Rent collection and tracking",
+    "Property maintenance",
+    "Repairs and renovation support",
+    "Property inspection and surveillance",
+    "Security and safeguarding",
+    "Emergency support – immediate action for urgent issues",
+    "Periodic reporting with transparent updates via WhatsApp and email",
+    "Geo-tagged photos and videos"
+  ],
+}
 ];

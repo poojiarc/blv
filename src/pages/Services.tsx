@@ -11,6 +11,7 @@ import serviceWealth from "@/assets/service-wealth.jpg";
 import serviceVirtual from "@/assets/service-virtual.jpg";
 import serviceDocument from "@/assets/service-document.jpg";
 import serviceElderly from "@/assets/service-elderly.jpg";
+import serviceendtoend from "@/assets/service-end-to-end.png";
 
 const imageMap: Record<string, string> = {
   "service-property": serviceProperty,
@@ -23,6 +24,7 @@ const imageMap: Record<string, string> = {
   "service-virtual": serviceVirtual,
   "service-document": serviceDocument,
   "service-elderly": serviceElderly,
+  "service-end-to-end": serviceendtoend,
 };
 
 const Services = () => {

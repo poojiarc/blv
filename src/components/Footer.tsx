@@ -11,8 +11,8 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img src={logo} alt="BLV Global" className="h-12 w-auto rounded" />
               <div>
-                <span className="text-primary-foreground font-serif font-bold text-sm leading-tight block">BLV Global NRI</span>
-                <span className="text-gold text-xs font-medium leading-tight block">Asset Management Pvt. Ltd.</span>
+                <span className="text-primary-foreground font-serif font-bold text-sm leading-tight block">BLV GLOBAL NRI</span>
+                <span className="text-gold text-xs font-medium leading-tight block">ASSET MANAGEMENT PVT. LTD.</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/60">

@@ -67,7 +67,7 @@ const Index = () => {
 
                 <FadeIn delay={800} duration={1000}>
                   <p className="text-base md:text-lg text-gray-300 mb-5 max-w-xl" style={{ letterSpacing: '-0.01em' }}>
-                    We back NRIs with trusted on-ground representation — managing property, legal, and financial matters across India.
+                     Your Permanent Presence in India — Without Being Here.we back NRIs with trusted………. Accrods india.
                   </p>
                 </FadeIn>
 
@@ -126,12 +126,12 @@ const Index = () => {
               BLV Global NRI Asset Management Pvt. Ltd. is a professionally managed, Government-registered and FEMA-compliant company dedicated exclusively to Non-Resident Indians (NRIs) and global investors.
             </p>
             <p className="text-foreground max-w-3xl mx-auto text-base leading-relaxed font-medium">
-              We don't operate as brokers. We act as responsible custodians of your assets, delivering transparency, accountability, and complete peace of mind — no matter where you are in the world.
+              We don't operate as agents. We act as responsible custodians of your assets, delivering transparency, accountability, and complete peace of mind — no matter where you are in the world.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {[
-              { icon: Shield, title: "Government Registered", desc: "Fully compliant with FEMA guidelines and Indian regulations" },
+              { icon: Shield, title: "Government Incorporated.", desc: "Fully compliant with FEMA guidelines and Indian regulations" },
               { icon: Globe, title: "NRI-Focused", desc: "Exclusively serving NRIs across USA, UK, UAE, Europe & Australia" },
               { icon: CheckCircle, title: "Single Point of Contact", desc: "No multiple follow-ups — one reliable representative in India" },
             ].map((item) => (

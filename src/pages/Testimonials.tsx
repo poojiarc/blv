@@ -137,10 +137,7 @@ const faqs = [
     q: "Do I need to travel to India?",
     a: "In most cases, no. We coordinate Notary, Apostille, Embassy attestation, POA registration, and execution so that transactions can be completed remotely.",
   },
-  {
-    q: "Do you manage rentals?",
-    a: "No. We focus on asset protection and transactions.",
-  },
+  
   {
     q: "How do I track progress?",
     a: "Through digital reports, photos, and direct communication. NRIs remain informed and in control — from anywhere in the world.",

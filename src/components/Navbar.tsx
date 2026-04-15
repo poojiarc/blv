@@ -11,7 +11,7 @@ const navItems = [
     icon: Info,
     dropdown: [
       { label: "About Us", path: "/about", icon: Info },
-      { label: "Founder", path: "/founder", icon: User },
+      { label: "Founders", path: "/founder", icon: User },
     ],
   },
   { label: "Services", path: "/services", icon: Wrench },
@@ -49,8 +49,8 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="BLV Global" className="h-11 w-auto rounded" />
           <div className="hidden sm:block">
-            <span className="text-white font-semibold text-sm leading-tight block tracking-tight">BLV Global NRI</span>
-            <span className="text-gray-300 text-xs font-medium leading-tight block">Asset Management</span>
+            <span className="text-white font-semibold text-sm leading-tight block tracking-tight">BLV GLOBAL NRI</span>
+            <span className="text-gray-300 text-xs font-medium leading-tight block">ASSET MANAGEMENT PVT. LTD.</span>
           </div>
         </Link>
 
