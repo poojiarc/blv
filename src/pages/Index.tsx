@@ -28,10 +28,11 @@ const imageMap: Record<string, string> = {
 };
 
 const stats = [
-  { value: "7+", label: "Years Experience" },
-  { value: "70+", label: "Projects Completed" },
-  { value: "3", label: "States Covered" },
+  { value: "8+", label: "Years Experience" },
+  { value: "90+", label: "Projects Completed" },
+  { value: "3", label: "Andhra Pradesh, Telangana, Karnataka States Covered" },
   { value: "100%", label: "FEMA Compliant" },
+  {value:"₹150cr+",label:"Transactions Facilitated"},
 ];
 
 const HERO_VIDEO_URL = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4";

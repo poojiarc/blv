@@ -72,15 +72,158 @@ const ServiceDetail = () => {
 
           <div className="glass-card p-8 md:p-12 mb-8">
             <p className="text-muted-foreground leading-relaxed text-lg mb-8">{service.description}</p>
-            <h3 className="font-serif text-xl font-bold text-foreground mb-6">Key Features</h3>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {service.bullets.map((bullet) => (
-                <div key={bullet} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                  <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm">{bullet}</span>
-                </div>
-              ))}
-            </div>
+            {/* NORMAL SERVICES */}
+{service.bullets && (
+  <>
+    <h3 className="font-serif text-xl font-bold text-foreground mb-6">
+      Key Features
+    </h3>
+    <div className="grid sm:grid-cols-2 gap-3 mb-8">
+      {service.bullets.map((bullet) => (
+        <div key={bullet} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+          <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+          <span className="text-foreground text-sm">{bullet}</span>
+        </div>
+      ))}
+    </div>
+  </>
+)}
+
+{/* 🔼 TAX SERVICES */}
+{service.taxServices && (
+  <>
+    <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
+      NRI Tax Filing & Compliance
+    </h3>
+
+    <div className="grid md:grid-cols-2 gap-6 mb-10">
+      {service.taxServices.map((item) => (
+        <div key={item.title} className="p-4 rounded-lg bg-muted/50">
+          <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
+          <ul className="space-y-1">
+            {item.points.map((point) => (
+              <li key={point} className="text-sm text-muted-foreground flex gap-2">
+                <CheckCircle className="h-4 w-4 text-gold mt-1" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </>
+)}
+
+{/* 🔽 REPARTRIATION */}
+{service.repatriationServices && (
+  <>
+    <hr className="my-10 border-gold/20" />
+
+    <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
+      Fund Repatriation Services (India ⇄ USA)
+    </h3>
+
+    <div className="grid md:grid-cols-2 gap-6">
+      {service.repatriationServices.map((item) => (
+        <div key={item.title} className="p-4 rounded-lg bg-muted/50">
+          <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
+          <ul className="space-y-1">
+            {item.points.map((point) => (
+              <li key={point} className="text-sm text-muted-foreground flex gap-2">
+                <CheckCircle className="h-4 w-4 text-gold mt-1" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </>
+)}
+{service.documentSections && (
+  <>
+    <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
+      Document Management Services
+    </h3>
+
+    <div className="grid md:grid-cols-2 gap-6">
+      {service.documentSections.map((section) => (
+        <div key={section.title} className="p-4 rounded-lg bg-muted/50">
+          <h4 className="font-semibold text-foreground mb-2">
+            {section.title}
+          </h4>
+
+          <ul className="space-y-1">
+            {section.points.map((point) => (
+              <li
+                key={point}
+                className="text-sm text-muted-foreground flex gap-2"
+              >
+                <CheckCircle className="h-4 w-4 text-gold mt-1" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </>
+)}
+{/* VIRTUAL EXPERIENCE */}
+{service.virtualSections && (
+  <>
+    <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
+      Virtual Property Experience
+    </h3>
+
+    <div className="grid md:grid-cols-2 gap-6">
+      {service.virtualSections.map((section) => (
+        <div key={section.title} className="p-4 rounded-lg bg-muted/50">
+          <h4 className="font-semibold text-foreground mb-2">
+            {section.title}
+          </h4>
+
+          <ul className="space-y-1">
+            {section.points.map((point) => (
+              <li key={point} className="text-sm text-muted-foreground flex gap-2">
+                <CheckCircle className="h-4 w-4 text-gold mt-1" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </>
+)}
+
+{/* WEALTH MANAGEMENT */}
+{service.wealthSections && (
+  <>
+    <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
+      Asset & Wealth Management
+    </h3>
+
+    <div className="grid md:grid-cols-2 gap-6">
+      {service.wealthSections.map((section) => (
+        <div key={section.title} className="p-4 rounded-lg bg-muted/50">
+          <h4 className="font-semibold text-foreground mb-2">
+            {section.title}
+          </h4>
+
+          <ul className="space-y-1">
+            {section.points.map((point) => (
+              <li key={point} className="text-sm text-muted-foreground flex gap-2">
+                <CheckCircle className="h-4 w-4 text-gold mt-1" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </>
+)}
           </div>
 
           <div className="text-center">
