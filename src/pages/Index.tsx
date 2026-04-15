@@ -6,7 +6,6 @@ import FadeIn from "@/components/FadeIn";
 import awardCeremony from "@/assets/award-ceremony.png";
 import awardNews from "@/assets/award-news.png";
 import southIndiaMap from "@/assets/south-india-map.png";
-import FadeIn from "@/components/FadeIn";
 import serviceProperty from "@/assets/service-property.jpg";
 import serviceInvestment from "@/assets/service-investment.jpg";
 import serviceGpa from "@/assets/service-gpa.jpg";
