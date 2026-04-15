@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Globe, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Shield, Globe, CheckCircle, Phone, Mail, MapPin, Award, Trophy } from "lucide-react";
 import { services } from "@/data/services";
 import AnimatedHeading from "@/components/AnimatedHeading";
+import FadeIn from "@/components/FadeIn";
+import awardCeremony from "@/assets/award-ceremony.png";
+import awardNews from "@/assets/award-news.png";
+import southIndiaMap from "@/assets/south-india-map.png";
 import FadeIn from "@/components/FadeIn";
 import serviceProperty from "@/assets/service-property.jpg";
 import serviceInvestment from "@/assets/service-investment.jpg";
