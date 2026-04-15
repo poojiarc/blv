@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Founder from "./pages/Founder";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <FloatingSocial />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
