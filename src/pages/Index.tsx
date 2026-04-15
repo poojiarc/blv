@@ -159,7 +159,112 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* AWARDS & RECOGNITION */}
+      <section className="section-padding bg-navy relative overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-gold text-sm font-semibold tracking-wider uppercase flex items-center justify-center gap-2">
+              <Trophy className="h-4 w-4" /> Awards & Recognition
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary-foreground mt-3 mb-6">
+              Honoured & Recognised
+            </h2>
+            <p className="text-primary-foreground/70 max-w-3xl mx-auto text-lg leading-relaxed">
+              Honoured &amp; privileged to receive the <span className="text-gold font-semibold">International Business &amp; Education Awards 2026</span> from International Cricketer <span className="text-gold font-semibold">Mr. Suresh Raina</span> at Hyatt Centric, New Delhi — a proud moment on <span className="text-gold font-semibold">11th April 2026</span> for <span className="text-gold font-semibold">Best Global NRI Property Management Company</span>.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-lg group">
+              <img
+                src={awardCeremony}
+                alt="PVR Vagesh Datt receiving International Business & Education Award 2026 from Suresh Raina"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width={800}
+                height={600}
+              />
+              <div className="p-5 bg-navy-dark">
+                <div className="flex items-center gap-2 mb-2">
+                  <Award className="h-5 w-5 text-gold" />
+                  <span className="text-gold font-semibold text-sm">International Business & Education Awards 2026</span>
+                </div>
+                <p className="text-primary-foreground/60 text-sm">PVR Vagesh Datt, Founder & Managing Director, receiving the award at Hyatt Centric, New Delhi</p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-lg group">
+              <img
+                src={awardNews}
+                alt="Telangana News Spot coverage of BLV Global NRI Award"
+                className="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width={800}
+                height={600}
+              />
+              <div className="p-5 bg-navy-dark">
+                <div className="flex items-center gap-2 mb-2">
+                  <Award className="h-5 w-5 text-gold" />
+                  <span className="text-gold font-semibold text-sm">Media Recognition</span>
+                </div>
+                <p className="text-primary-foreground/60 text-sm">Featured in Telangana News Spot — Best Global NRI Property Management Company</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <div className="liquid-glass border border-gold/20 px-8 py-4 rounded-2xl text-center">
+              <p className="text-primary-foreground font-serif text-lg font-semibold">
+                🏆 Best Global NRI Property Management Company — 2026
+              </p>
+              <p className="text-primary-foreground/50 text-sm mt-1">International Business & Education Awards, New Delhi</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR PRESENCE — South India Map */}
+      <section className="section-padding bg-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-gold text-sm font-semibold tracking-wider uppercase">Our Presence</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
+                Serving Across South India
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed mb-6">
+                BLV Global has a strong on-ground presence across three key states in South India, ensuring your properties and assets are managed with local expertise and personal attention.
+              </p>
+              <div className="flex flex-col gap-3">
+                {[
+                  { state: "Telangana", desc: "Headquartered in Secunderabad with extensive coverage across Hyderabad and surrounding districts" },
+                  { state: "Andhra Pradesh", desc: "Active presence covering Vijayawada, Visakhapatnam and key investment corridors" },
+                  { state: "Karnataka", desc: "Operations extending to Bengaluru and surrounding regions for NRI clients" },
+                ].map((item) => (
+                  <div key={item.state} className="flex items-start gap-3 p-4 glass-card">
+                    <MapPin className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-foreground font-semibold text-sm">{item.state}</span>
+                      <p className="text-muted-foreground text-xs mt-0.5">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src={southIndiaMap}
+                alt="BLV Global presence across Telangana, Andhra Pradesh and Karnataka"
+                className="w-full max-w-md drop-shadow-2xl"
+                loading="lazy"
+                width={800}
+                height={900}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
