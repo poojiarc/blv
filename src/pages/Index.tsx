@@ -16,7 +16,7 @@ import serviceWealth from "@/assets/service-wealth.jpg";
 import serviceVirtual from "@/assets/service-virtual.jpg";
 import serviceDocument from "@/assets/service-document.jpg";
 import serviceElderly from "@/assets/service-elderly.jpg";
-
+import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 const imageMap: Record<string, string> = {
   "service-property": serviceProperty,
   "service-investment": serviceInvestment,
@@ -39,7 +39,8 @@ const stats = [
 ];
 
 const HERO_VIDEO_URL = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4";
-
+const geoUrl =
+  "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/india/india-states.json";
 const Index = () => {
   return (
     <div className="min-h-screen">
