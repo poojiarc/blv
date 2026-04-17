@@ -33,10 +33,10 @@ const Services = () => {
       <section className="bg-navy section-padding text-center">
         <span className="text-gold text-sm font-semibold tracking-wider uppercase">What We Do</span>
         <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-3 mb-6">
-          Our Services
+          OUR 11 SERVICE PILLARS
         </h1>
         <p className="text-primary-foreground/70 max-w-3xl mx-auto text-lg">
-          Comprehensive, FEMA-compliant solutions for NRIs — from property management to legal compliance.
+         From acquisition to exit, our pillars master every layer of ownership and sustained wealth creation for Global NRIs.
         </p>
       </section>
 

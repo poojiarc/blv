@@ -13,10 +13,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="BLV Global" className="h-12 w-auto rounded" />
+              <img src={logo} alt="BLV Global" className="h-16 md:h-20 w-auto rounded" />
               <div>
                 <span className="text-primary-foreground font-serif font-bold text-sm leading-tight block">BLV GLOBAL NRI</span>
-                <span className="text-gold text-xs font-medium leading-tight block">ASSET MANAGEMENT PVT. LTD.</span>
+                <span className="text-gold text-xs font-medium leading-tight block">ASSET MANAGEMENT   PVT. LTD.</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/60">
@@ -108,7 +108,7 @@ const Footer = () => {
 
   {/* Copyright */}
   <p className="text-xs text-primary-foreground/40">
-    © {new Date().getFullYear()} BLV Global NRI Asset Management Pvt. Ltd. All rights reserved.
+    © {new Date().getFullYear()} BLV Global NRI Asset Management  PVT. LTD. All rights reserved.
   </p>
 
 </div>

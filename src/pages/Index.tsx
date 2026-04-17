@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Globe, CheckCircle, Phone, Mail, MapPin, Award, Trophy } from "lucide-react";
+import { ArrowRight,  Globe, CheckCircle, Phone, Mail, MapPin, Award, Trophy, FileCheck,      // ✅ ADD THIS
+  Building2 } from "lucide-react";
 import { services } from "@/data/services";
 import AnimatedHeading from "@/components/AnimatedHeading";
 import FadeIn from "@/components/FadeIn";
@@ -16,7 +17,7 @@ import serviceWealth from "@/assets/service-wealth.jpg";
 import serviceVirtual from "@/assets/service-virtual.jpg";
 import serviceDocument from "@/assets/service-document.jpg";
 import serviceElderly from "@/assets/service-elderly.jpg";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+
 const imageMap: Record<string, string> = {
   "service-property": serviceProperty,
   "service-investment": serviceInvestment,
@@ -29,19 +30,65 @@ const imageMap: Record<string, string> = {
   "service-document": serviceDocument,
   "service-elderly": serviceElderly,
 };
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+// ✅ ADD HERE (outside Index)
+const StatItem = ({ value, label }: { value: string; label: string }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
+  const number = parseInt(value.replace(/\D/g, "")) || 0;
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="font-serif text-3xl md:text-4xl font-bold text-gold mb-1">
+        {inView ? (
+          <>
+            <CountUp end={number} duration={2} />
+            {value.includes("+") && "+"}
+            {value.includes("cr") && "cr"}
+          </>
+        ) : (
+          "0"
+        )}
+      </div>
+      <div className="text-sm text-primary-foreground/60">{label}</div>
+    </div>
+  );
+};
+
+// ✅ YOUR MAIN COMPONENT
+const Index = () => {
 const stats = [
   { value: "8+", label: "Years Experience" },
   { value: "90+", label: "Projects Completed" },
-  { value: "3", label: "Andhra Pradesh, Telangana, Karnataka States Covered" },
+  { value: "3", label: " STATES: TELANGANA ANDHRA PRADESH, KARNATAKA." },
   { value: "100%", label: "FEMA Compliant" },
   {value:"₹150cr+",label:"Transactions Facilitated"},
+];
+
+const certifications = [
+  {
+    title: "FEMA REGISTERED",
+    subtitle: "FOREIGN EXCHANGE MANAGEMENT ACT 1999",
+  },
+  {
+    title: "RERA- REGISTERED FOUNDER",
+    subtitle: "REAL ESTATE REGULATORY AUTHORITY",
+    extra: "Real Estate (Regulation and Development) Act, 2016",
+  },
+  {
+    title: "GOVERNMENT OF INDIA",
+    subtitle: "MINISTRY OF EXTERNAL AFFAIRS - INCORPORATED COMPANY",
+  },
 ];
 
 const HERO_VIDEO_URL = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4";
 const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/india/india-states.json";
-const Index = () => {
+
   return (
     <div className="min-h-screen">
       {/* HERO */}
@@ -78,12 +125,7 @@ const Index = () => {
 
                 <FadeIn delay={1200} duration={1000}>
                   <div className="flex flex-wrap gap-4">
-                    <Link
-                      to="/contact"
-                      className="bg-white text-black px-8 py-3 rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors"
-                    >
-                      Get in Touch
-                    </Link>
+                    
                     <Link
                       to="/services"
                       className="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium text-sm hover:bg-white hover:text-black transition-all duration-300"
@@ -98,7 +140,7 @@ const Index = () => {
               <FadeIn delay={1400} duration={1000} className="mt-8 lg:mt-0 flex items-end justify-start lg:justify-end">
                 <div className="liquid-glass border border-white/20 px-6 py-3 rounded-xl">
                   <span className="text-lg md:text-xl lg:text-2xl font-light text-white">
-                    Property. Legal. Compliance.
+                    ASSETS • LEGAL • FINANCE• EXECUTION
                   </span>
                 </div>
               </FadeIn>
@@ -107,17 +149,52 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats */}
       <section className="bg-navy py-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-serif text-3xl md:text-4xl font-bold text-gold mb-1">{stat.value}</div>
-              <div className="text-sm text-primary-foreground/60">{stat.label}</div>
-            </div>
-          ))}
+  <div className="max-w-6xl mx-auto px-4">
+
+    {/* TOP 4 STATS */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {stats.slice(0, 4).map((stat) => (
+        <StatItem key={stat.label} value={stat.value} label={stat.label} />
+      ))}
+    </div>
+
+    {/* SECOND ROW: ₹150cr + CERTIFICATIONS */}
+<div className="flex flex-wrap items-center justify-center gap-10 mt-12">
+
+  {/* ₹150cr (Animated) */}
+  <StatItem value="150cr+" label="Transactions Facilitated" />
+
+  {/* CERTIFICATIONS (NO WHITE BG) */}
+  {certifications.map((item) => (
+    <div key={item.title} className="text-center max-w-xs">
+
+      {/* GOLD TITLE (like ₹150cr) */}
+      <div className="font-serif text-lg md:text-xl font-bold text-gold mb-1">
+        {item.title}
+      </div>
+
+      {/* SUBTEXT (like stat label) */}
+      <div className="text-sm text-primary-foreground/60 leading-snug">
+        {item.subtitle}
+      </div>
+
+      {/* EXTRA TEXT */}
+      {item.extra && (
+        <div className="text-sm text-primary-foreground/60 leading-snug">
+          {item.extra}
         </div>
-      </section>
+      )}
+
+    </div>
+  ))}
+
+</div>
+      
+
+  </div>
+</section>
+      
 
       {/* ABOUT PREVIEW */}
       <section className="section-padding bg-background">
@@ -128,27 +205,66 @@ const Index = () => {
               Your Trusted Partner in India
             </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed mb-4">
-              BLV Global NRI Asset Management Pvt. Ltd. is a professionally managed, Government-registered and FEMA-compliant company dedicated exclusively to Non-Resident Indians (NRIs) and global investors.
+              BLV Global NRI Asset Management  PVT. LTD. is a professionally managed, Government-registered and FEMA-compliant company dedicated exclusively to Non-Resident Indians (NRIs) and global investors.
             </p>
             <p className="text-foreground max-w-3xl mx-auto text-base leading-relaxed font-medium">
               We don't operate as agents. We act as responsible custodians of your assets, delivering transparency, accountability, and complete peace of mind — no matter where you are in the world.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
-            {[
-              { icon: Shield, title: "Government Incorporated.", desc: "Fully compliant with FEMA guidelines and Indian regulations" },
-              { icon: Globe, title: "NRI-Focused", desc: "Exclusively serving NRIs across USA, UK, UAE, Europe & Australia" },
-              { icon: CheckCircle, title: "Single Point of Contact", desc: "No multiple follow-ups — one reliable representative in India" },
-            ].map((item) => (
-              <div key={item.title} className="glass-card p-8 text-center hover:scale-[1.02] transition-transform">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gold/10 mb-5">
-                  <item.icon className="h-7 w-7 text-gold" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+         <div className="grid md:grid-cols-3 gap-6 mb-10">
+  {[
+    {
+      icon: "emblem",
+      title: "Government Recognized",
+      desc: "Operating in compliance with Indian regulatory frameworks and standards",
+    },
+    {
+      icon: Globe,
+      title: "NRI-Focused",
+      desc: "Exclusively serving NRIs across USA, UK, UAE, Europe & Australia",
+    },
+    {
+      icon: CheckCircle,
+      title: "Single Point of Contact",
+      desc: "No multiple follow-ups — one reliable representative in India",
+    },
+    {
+      icon: FileCheck,
+      title: "FEMA Registered",
+      desc: "Compliant under Foreign Exchange Management Act (1999) for NRI transactions",
+    },
+    {
+      icon: Building2,
+      title: "RERA Compliant",
+      desc: "Aligned with Real Estate Regulatory Authority (RERA) Act, 2016",
+    },
+  ].map((item) => (
+    <div
+      key={item.title}
+      className="glass-card p-8 text-center hover:scale-[1.02] transition-transform"
+    >
+      <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gold/10 mb-5">
+        
+        {item.icon === "emblem" ? (
+          <img
+            src="/emblem.jpg"  // 👈 IMPORTANT
+            alt="National Emblem of India"
+            className="h-8 w-8 object-contain"
+          />
+        ) : (
+          <item.icon className="h-7 w-7 text-gold" />
+        )}
+
+      </div>
+
+      <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+        {item.title}
+      </h3>
+      <p className="text-muted-foreground text-sm">{item.desc}</p>
+    </div>
+  ))}
+</div>
+          
           <div className="text-center">
             <Link
               to="/about"
@@ -236,21 +352,48 @@ const Index = () => {
               <p className="text-muted-foreground text-base leading-relaxed mb-6">
                 BLV Global has a strong on-ground presence across three key states in South India, ensuring your properties and assets are managed with local expertise and personal attention.
               </p>
-              <div className="flex flex-col gap-3">
-                {[
-                  { state: "Telangana", desc: "Headquartered in Secunderabad with extensive coverage across Hyderabad and surrounding districts" },
-                  { state: "Andhra Pradesh", desc: "Active presence covering Vijayawada, Visakhapatnam and key investment corridors" },
-                  { state: "Karnataka", desc: "Operations extending to Bengaluru and surrounding regions for NRI clients" },
-                ].map((item) => (
-                  <div key={item.state} className="flex items-start gap-3 p-4 glass-card">
-                    <MapPin className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                    <div>
-                      <span className="text-foreground font-semibold text-sm">{item.state}</span>
-                      <p className="text-muted-foreground text-xs mt-0.5">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <div className="grid gap-6 mt-6">
+
+  {/* TELANGANA */}
+  <div className="glass-card p-5">
+    <h3 className="text-foreground font-semibold text-lg mb-3">Telangana</h3>
+
+    <div className="space-y-2 text-sm text-muted-foreground">
+      <p><span className="text-gold font-medium">Tier 1:</span> Hyderabad</p>
+
+      <p><span className="text-gold font-medium">Tier 2:</span> Warangal, Karimnagar, Khammam, Nizamabad, Ramagundam</p>
+
+      <p><span className="text-gold font-medium">Tier 3:</span> Developing & Semi-Urban Regions</p>
+    </div>
+  </div>
+
+  {/* ANDHRA PRADESH */}
+  <div className="glass-card p-5">
+    <h3 className="text-foreground font-semibold text-lg mb-3">Andhra Pradesh</h3>
+
+    <div className="space-y-2 text-sm text-muted-foreground">
+      <p><span className="text-gold font-medium">Tier 1:</span> Visakhapatnam, Vijayawada</p>
+
+      <p><span className="text-gold font-medium">Tier 2:</span> Tirupati, Guntur, Kurnool, Nellore, Rajahmundry, Kakinada, Kadapa, Anantapur</p>
+
+      <p><span className="text-gold font-medium">Tier 3:</span> Ongole, Eluru, Chittoor, Machilipatnam, Srikakulam, Vizianagaram, Hindupur, Proddatur, Tenali</p>
+    </div>
+  </div>
+
+  {/* KARNATAKA */}
+  <div className="glass-card p-5">
+    <h3 className="text-foreground font-semibold text-lg mb-3">Karnataka</h3>
+
+    <div className="space-y-2 text-sm text-muted-foreground">
+      <p><span className="text-gold font-medium">Tier 1:</span> Bengaluru</p>
+
+      <p><span className="text-gold font-medium">Tier 2:</span> Mysuru, Mangaluru, Hubballi-Dharwad, Belagavi, Kalaburagi, Davangere</p>
+
+      <p><span className="text-gold font-medium">Tier 3:</span> Ballari, Shivamogga, Tumakuru, Udupi, Hassan, Chikkamagaluru, Raichur, Kolar</p>
+    </div>
+  </div>
+
+</div>
             </div>
             <div className="flex justify-center">
               <img

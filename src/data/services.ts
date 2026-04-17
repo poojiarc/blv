@@ -1,116 +1,403 @@
+export interface ServiceSection {
+  title: string;
+  points: string[];
+}
+
 export interface ServiceData {
   id: string;
   title: string;
   shortDescription: string;
   image: string;
   description: string;
+
   bullets?: string[];
 
-  taxServices?: {
-    title: string;
-    points: string[];
-  }[];
+  taxServices?: ServiceSection[];
+  repatriationServices?: ServiceSection[];
+  documentSections?: ServiceSection[];
+  virtualSections?: ServiceSection[];
+  wealthSections?: ServiceSection[];
 
-  repatriationServices?: {
-    title: string;
-    points: string[];
-  }[];
-
-  documentSections?: {
-    title: string;
-    points: string[];
-  }[];
-  virtualSections?: {
-  title: string;
-  points: string[];
-}[];
-
-wealthSections?: {
-  title: string;
-  points: string[];
-}[];
+  powerLine?: string; // ✅ FIXED (optional)
 }
 
 export const services: ServiceData[] = [
   // your services here
   {
-    id: "property-management",
-    title: "NRI Property Management & Asset Oversight",
-    shortDescription: "Secure, compliant, and professionally monitored asset protection across Telangana, AP & Karnataka.",
-    image: "service-property",
-    description: "We ensure your property remains secure and protected, legally compliant, professionally monitored, and fully documented. Our focus is on asset protection, compliance, and value preservation.",
-    bullets: [
-      "Secure and protected asset oversight",
-      "Legal compliance monitoring",
-      "Professional on-ground monitoring",
-      "Fully documented and transparent reporting",
-      "Value preservation and maintenance coordination",
-      "Coverage across Telangana, AP & Karnataka",
-    ],
-  },
+  id: "property-management",
+  title: "Advanced NRI Property Management & Asset Oversight",
+  shortDescription:
+    "Institutional-grade asset management focused on performance and protection.",
+  image: "service-property",
+
+  description:
+    "We deliver advanced property management solutions combining technology, analytics, and on-ground execution for long-term wealth growth.",
+
+  wealthSections: [
+    {
+      title: "Asset Performance Analytics",
+      points: [
+        "ROI tracking",
+        "Market benchmarking",
+        "Performance reports",
+        "Actionable insights",
+      ],
+    },
+    {
+      title: "Smart Monitoring",
+      points: [
+        "CCTV integration",
+        "Remote dashboards",
+        "Real-time alerts",
+        "24/7 monitoring",
+      ],
+    },
+    {
+      title: "Revenue Optimization",
+      points: [
+        "Rental strategy",
+        "Dynamic pricing",
+        "Vacancy reduction",
+        "Income maximization",
+      ],
+    },
+    {
+      title: "Value Enhancement",
+      points: [
+        "Renovation planning",
+        "CapEx budgeting",
+        "Execution support",
+        "Value-add improvements",
+      ],
+    },
+    {
+      title: "Risk & Compliance",
+      points: [
+        "Legal monitoring",
+        "Risk alerts",
+        "Preventive actions",
+        "Compliance tracking",
+      ],
+    },
+    {
+      title: "Portfolio Strategy",
+      points: [
+        "Asset rebalancing",
+        "Buy/sell recommendations",
+        "Diversification",
+        "Wealth optimization",
+      ],
+    },
+  ],
+
+  powerLine:
+    "Advanced property management and asset oversight—focused on performance, protection, and long-term wealth growth.",
+},
   {
-    id: "buying-selling",
-    title: "Property Buying, Selling, Investment Advisory & Long term portfolio management",
-    shortDescription: "Safe and profitable real estate decisions with risk mitigation and legal clarity.",
-    image: "service-investment",
-    description: "We assist NRIs in making safe and profitable real estate decisions. All transactions are executed with risk mitigation and legal clarity.",
-    bullets: [
-      "Property shortlisting aligned with goals",
-      "Physical inspection & condition reporting",
-      "Legal due diligence & title verification",
-      "Negotiation & deal structuring",
-      "Sale management with fair valuation",
-      "Long-term investment advisory",
-    ],
-  },
+  id: "buying-selling",
+  title:
+    "Property Buying, Selling, Investment Advisory & Long Term Portfolio Management",
+  shortDescription:
+    "End-to-end real estate solutions for NRIs covering acquisition, sale, and growth.",
+  image: "service-investment",
+
+  description:
+    "We provide complete real estate solutions for NRIs, ensuring safe transactions, profitable investments, and long-term wealth growth.",
+
+  wealthSections: [
+    {
+      title: "Property Buying",
+      points: [
+        "Property identification",
+        "Virtual inspections",
+        "Legal verification",
+        "Negotiation support",
+      ],
+    },
+    {
+      title: "Property Selling",
+      points: [
+        "Market valuation",
+        "Buyer sourcing",
+        "Deal structuring",
+        "Sale closure",
+      ],
+    },
+    {
+      title: "Investment Advisory",
+      points: [
+        "Goal-based planning",
+        "Location analysis",
+        "ROI evaluation",
+        "Risk assessment",
+      ],
+    },
+    {
+      title: "Portfolio Management",
+      points: [
+        "Managing multiple assets",
+        "Rental income tracking",
+        "Performance review",
+        "Reinvestment strategies",
+      ],
+    },
+  ],
+
+  powerLine:
+    "End-to-end real estate solutions for NRIs—covering buying, selling, investment, and long-term portfolio management.",
+},
+ {
+  id: "legal-documentation",
+  title: "Legal, Documentation & Compliance Support",
+  shortDescription:
+    "Complete legal due diligence, documentation, and compliance management.",
+  image: "service-legal",
+
+  description:
+    "We handle every legal and documentation aspect of your property transactions with accuracy, compliance, and accountability.",
+
+  wealthSections: [
+    {
+      title: "Legal Due Diligence",
+      points: [
+        "Title verification",
+        "Encumbrance certificate check",
+        "Land use validation",
+        "Litigation background check",
+      ],
+    },
+    {
+      title: "Document Validation",
+      points: [
+        "Collecting seller/builder documents",
+        "Cross-verification",
+        "Identifying missing documents",
+        "Transaction-ready file preparation",
+      ],
+    },
+    {
+      title: "Regulatory Compliance",
+      points: [
+        "RERA verification",
+        "Approval checks",
+        "Legal construction validation",
+        "Local law compliance",
+      ],
+    },
+    {
+      title: "Agreement Drafting & Review",
+      points: [
+        "Agreement to Sale drafting",
+        "Builder agreement review",
+        "Clause protection",
+        "Negotiation support",
+      ],
+    },
+    {
+      title: "Tax & Financial Compliance",
+      points: [
+        "TDS handling",
+        "Form 15CA / 15CB",
+        "Capital gains documentation",
+        "PAN & KYC compliance",
+      ],
+    },
+    {
+      title: "Post-Registration Compliance",
+      points: [
+        "Mutation / Khata transfer",
+        "Tax ownership updates",
+        "Utility transfers",
+        "Society updates",
+      ],
+    },
+    {
+      title: "Risk & Litigation Support",
+      points: [
+        "Fraud prevention",
+        "Legal advisory",
+        "Court coordination",
+        "Lawyer liaison",
+      ],
+    },
+  ],
+
+  powerLine:
+    "From verification to registration to compliance—we manage every legal detail of your property in India.",
+},
   {
-    id: "legal-documentation",
-    title: "Legal, Documentation & Compliance Support",
-    shortDescription: "All legal requirements managed under one roof with accuracy and accountability.",
-    image: "service-legal",
-    description: "We manage all legal requirements under one roof. Every process is handled with accuracy, compliance, and accountability.",
-    bullets: [
-      "Sale Deeds, Purchase Deeds & Agreements",
-      "Property registrations and ownership transfers",
-      "Legal opinion & documentation verification",
-      "Coordination with advocates, banks & government offices",
-      "FEMA-compliant structuring of all transactions",
-      "Non-litigation issue resolution",
-      "Litigation Solving- legal solutions",
-      "Court Cases/Disputes handling",
-      "Family litigations Handling & legal Clearances",
-    ],
-  },
+  id: "gpa-spa",
+  title: "GPA & SPA Services for NRIs",
+  shortDescription:
+    "Structured Power of Attorney solutions enabling secure and remote transactions.",
+  image: "service-gpa",
+
+  description:
+    "We provide comprehensive Power of Attorney solutions tailored for NRIs, enabling secure, compliant, and fully controlled execution of property, financial, and legal matters in India.",
+
+  wealthSections: [
+    {
+      title: "Types of Power of Attorney",
+      points: [
+        "General Power of Attorney (GPA)",
+        "Special Power of Attorney (SPA)",
+        "Durable Power of Attorney",
+        "Non-Durable Power of Attorney",
+        "Revocable Power of Attorney",
+        "Irrevocable Power of Attorney",
+        "Property-Specific Power of Attorney",
+        "Banking / Financial Power of Attorney",
+        "Legal / Litigation Power of Attorney",
+      ],
+    },
+    {
+      title: "POA Advisory & Structuring",
+      points: [
+        "GPA vs SPA guidance",
+        "Scope definition",
+        "Risk limitation structuring",
+        "Protection-focused drafting strategy",
+      ],
+    },
+    {
+      title: "Drafting of GPA / SPA",
+      points: [
+        "Property transactions",
+        "Banking & financial authority",
+        "Rental & management use",
+        "Court representation",
+      ],
+    },
+    {
+      title: "Attestation & Apostille",
+      points: [
+        "Notary & embassy attestation",
+        "Apostille coordination",
+        "Country-specific compliance",
+        "End-to-end handling",
+      ],
+    },
+    {
+      title: "Registration in India",
+      points: [
+        "Stamp duty & adjudication",
+        "Sub-registrar registration",
+        "State compliance handling",
+        "On-ground execution",
+      ],
+    },
+    {
+      title: "Execution & Representation",
+      points: [
+        "Signing agreements",
+        "Handling property transactions",
+        "Banking coordination",
+        "Authority-based execution",
+      ],
+    },
+    {
+      title: "Monitoring & Control",
+      points: [
+        "POA usage tracking",
+        "Misuse prevention",
+        "Revocation support",
+        "Lifecycle management",
+      ],
+    },
+  ],
+
+  powerLine:
+    "Authorize with confidence—your property, transactions, and legal matters handled seamlessly in India.",
+},
   {
-    id: "gpa-spa",
-    title: "GPA & SPA Services for NRIs",
-    shortDescription: "Complete Power of Attorney support enabling secure remote transactions.",
-    image: "service-gpa",
-    description: "We provide complete Power of Attorney support enabling secure and legally valid transactions without physical presence in India.",
-    bullets: [
-      "Drafting of GPA / SPA",
-      "Notary, Apostille & Embassy coordination",
-      "Registration in India",
-      "We Operate as authorised representatives",
-      "Remote transaction execution with complete capability.",
-    ],
-  },
-  {
-    id: "financial-banking",
-    title: "Financial & Banking Assistance",
-    shortDescription: "End-to-end financial coordination for NRI property requirements.",
-    image: "service-finance",
-    description: "We support all financial coordination for NRI property-related requirements, ensuring lawful, transparent, and stress-free financial management.",
-    bullets: [
-      "NRE / NRO account assistance",
-      "Repatriation as per RBI & FEMA norms",
-      "Home loan coordination",
-      "Tax compliance guidance",
-      "Transparent transaction tracking",
-      "Financial documentation support",
-    ],
-  },
-  {
+  id: "financial-banking",
+  title: "Financial & Banking Services for NRIs",
+  shortDescription:
+    "Complete financial structuring, banking coordination, and fund management for NRI real estate transactions.",
+  image: "service-finance",
+
+  description:
+    "We provide end-to-end financial and banking solutions tailored for NRIs, ensuring compliant, transparent, and optimized handling of funds across property investments in India.",
+
+  wealthSections: [
+    {
+      title: "NRE / NRO Account Setup & Management",
+      points: [
+        "Assistance in opening NRE / NRO accounts",
+        "Account structuring based on investment goals",
+        "Ongoing banking coordination",
+        "KYC & compliance updates",
+      ],
+    },
+    {
+      title: "Property Investment Fund Planning",
+      points: [
+        "Budget planning for property purchase",
+        "Fund allocation strategy",
+        "Investment structuring for returns",
+        "Advisory on timing & location",
+      ],
+    },
+    {
+      title: "Loan & Financing Assistance",
+      points: [
+        "NRI home loan eligibility guidance",
+        "Loan processing & documentation",
+        "Bank coordination & approvals",
+        "EMI structuring",
+      ],
+    },
+    {
+      title: "Transaction Structuring & Payment Handling",
+      points: [
+        "Stage-wise payment planning",
+        "Buyer/seller fund flow handling",
+        "Secure execution of transactions",
+        "Error-free payment coordination",
+      ],
+    },
+    {
+      title: "Repatriation & Fund Movement",
+      points: [
+        "Outward remittance planning",
+        "RBI compliance handling",
+        "Documentation coordination",
+        "Efficient fund transfer strategy",
+      ],
+    },
+    {
+      title: "Tax & Financial Structuring",
+      points: [
+        "Capital gains planning",
+        "TDS optimization",
+        "Tax-integrated structuring",
+        "Maximizing net returns",
+      ],
+    },
+    {
+      title: "Forex & Currency Optimization",
+      points: [
+        "Exchange rate timing strategy",
+        "USD ⇄ INR advisory",
+        "Forex cost reduction",
+        "Value maximization in transfers",
+      ],
+    },
+    {
+      title: "Financial Reporting & Transparency",
+      points: [
+        "Investment performance tracking",
+        "Cash flow visibility",
+        "Profitability reports",
+        "Full financial transparency",
+      ],
+    },
+  ],
+
+  powerLine:
+    "From funding to profit realization—complete financial control over your real estate investments in India.",
+},
+{
   id: "asset-wealth",
   title: "Asset & Wealth Management Support",
   shortDescription:
