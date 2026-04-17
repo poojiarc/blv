@@ -167,7 +167,7 @@
 //               </div>
 //               <h3 className="font-serif text-xl font-bold text-foreground mb-4">Our Vision</h3>
 //               <p className="text-muted-foreground text-sm leading-relaxed">
-//                 To become one of India's most trusted NRI asset management companies, known for professionalism, transparency, and long-term client relationships. We aim to protect, preserve, and optimize NRI assets while building relationships based on trust, clarity, and accountability.
+//                 To become one of India's most trusted NRI asset management companies, known for professionalism, transparency, and long-term client relationships. We aim to protect, preserve, and optimize NRI assets while building relationships based on trust, clarity, and Professional accountability.
 //               </p>
 //             </div>
 //             <div className="glass-card p-8">
@@ -235,7 +235,7 @@
 
 // export default About;
 import { Shield, Globe, CheckCircle, Eye, Heart, Users, AlertTriangle } from "lucide-react";
-
+import aboutImg from "@/assets/about 4.jpg";
 const About = () => {
   return (
     <div className="min-h-screen pt-20">
@@ -254,19 +254,37 @@ const About = () => {
         <div className="max-w-5xl mx-auto">
 
           {/* ABOUT */}
-          <div className="glass-card p-8 md:p-12 mb-12">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-              BLV GLOBAL NRI ASSET MANAGEMENT PVT. LTD.
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                BLV Global NRI Asset Management Pvt. Ltd. is a Government of India–incorporated company exclusively focused on the acquisition, legal, financial management, execution, and compliance of NRI assets across Telangana, Andhra Pradesh & Karnataka.
-              </p>
-              <p>
-                Backed by deep on-ground expertise and a structured approach, we serve as your single, trusted point of contact in India—ensuring your assets are managed with precision, legal clarity, and uncompromised care.
-              </p>
-            </div>
-          </div>
+         <div className="glass-card p-8 md:p-12 mb-12">
+  <div className="grid md:grid-cols-2 gap-10 items-center">
+
+    {/* LEFT TEXT */}
+    <div>
+      <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
+        BLV GLOBAL NRI ASSET MANAGEMENT PVT. LTD.
+      </h2>
+
+      <div className="space-y-4 text-muted-foreground leading-relaxed">
+        <p>
+          BLV Global NRI Asset Management Pvt. Ltd. is a Government of India–incorporated company exclusively focused on the acquisition, legal, financial management, execution, and compliance of NRI assets across Telangana, Andhra Pradesh & Karnataka.
+        </p>
+
+        <p>
+          Backed by deep on-ground expertise and a structured approach, we serve as your single, trusted point of contact in India—ensuring your assets are managed with precision, legal clarity, and uncompromised care.
+        </p>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="w-full">
+      <img
+    src={aboutImg}
+    alt="About BLV Global"
+    className="max-h-[420px] object-contain rounded-2xl shadow-2xl transition duration-500 bg-white"
+  />
+    </div>
+
+  </div>
+</div>
 
           {/* WHY BLV EXISTS */}
           <div className="mb-16">
@@ -334,6 +352,10 @@ const About = () => {
                   </div>
                 ))}
               </div>
+              <p className="text-red-500 font-semibold mt-6 text-sm">
+               The Result: You Deserve-
+Your investments in India evolve into growth, strength, and enduring peace of mind—guided by expertise, driven by precision, and delivering lasting success.
+              </p>
             </div>
           </div>
 

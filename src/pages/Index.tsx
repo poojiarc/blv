@@ -17,6 +17,9 @@ import serviceWealth from "@/assets/service-wealth.jpg";
 import serviceVirtual from "@/assets/service-virtual.jpg";
 import serviceDocument from "@/assets/service-document.jpg";
 import serviceElderly from "@/assets/service-elderly.jpg";
+import about1 from "@/assets/about 1.jpg";
+import about2 from "@/assets/about 2.jpg";
+import about3 from "@/assets/about 3.jpg";
 
 const imageMap: Record<string, string> = {
   "service-property": serviceProperty,
@@ -33,30 +36,38 @@ const imageMap: Record<string, string> = {
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 // ✅ ADD HERE (outside Index)
-const StatItem = ({ value, label }: { value: string; label: string }) => {
+const StatItem = ({
+  value,
+  label,
+}: {
+  value: string;
+  label: React.ReactNode;
+}) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
 
   const number = parseInt(value.replace(/\D/g, "")) || 0;
+  const suffix = value.replace(/[0-9]/g, "");
+
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-serif text-3xl md:text-4xl font-bold text-gold mb-1">
-        {inView ? (
-          <>
-            <CountUp end={number} duration={2} />
-            {value.includes("+") && "+"}
-            {value.includes("cr") && "cr"}
-          </>
-        ) : (
-          "0"
-        )}
-      </div>
-      <div className="text-sm text-primary-foreground/60">{label}</div>
+    <div className="font-serif text-3xl md:text-4xl font-bold text-gold mb-1">
+      {inView ? (
+        <>
+          <CountUp end={number} duration={2} />
+          {suffix}
+        </>
+      ) : (
+        "0"
+      )}
     </div>
-  );
+    <div className="text-sm text-primary-foreground/60">{label}</div>
+  </div>
+);
+  
 };
 
 // ✅ YOUR MAIN COMPONENT
@@ -64,8 +75,18 @@ const Index = () => {
 const stats = [
   { value: "8+", label: "Years Experience" },
   { value: "90+", label: "Projects Completed" },
-  { value: "3", label: " STATES: TELANGANA ANDHRA PRADESH, KARNATAKA." },
-  { value: "100%", label: "FEMA Compliant" },
+  {
+  value: "3",
+  label: (
+    <>
+      STATES:{" "}
+      <span className="text-gold font-medium">
+        TELANGANA, ANDHRA PRADESH, KARNATAKA
+      </span>
+    </>
+  ),
+},
+  { value:"100%", label: "FEMA Compliant" },
   {value:"₹150cr+",label:"Transactions Facilitated"},
 ];
 
@@ -119,7 +140,9 @@ const geoUrl =
 
                 <FadeIn delay={800} duration={1000}>
                   <p className="text-base md:text-lg text-gray-300 mb-5 max-w-xl" style={{ letterSpacing: '-0.01em' }}>
-                     Your Permanent Presence in India — Without Being Here.we back NRIs with trusted………. Accrods india.
+                     Your Permanent Presence in India – without being here. 
+
+BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
                   </p>
                 </FadeIn>
 
@@ -154,9 +177,9 @@ const geoUrl =
 
     {/* TOP 4 STATS */}
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-      {stats.slice(0, 4).map((stat) => (
-        <StatItem key={stat.label} value={stat.value} label={stat.label} />
-      ))}
+     {stats.slice(0, 4).map((stat, index) => (
+  <StatItem key={index} value={stat.value} label={stat.label} />
+))}
     </div>
 
     {/* SECOND ROW: ₹150cr + CERTIFICATIONS */}
@@ -279,17 +302,22 @@ const geoUrl =
       {/* AWARDS & RECOGNITION */}
       <section className="section-padding bg-navy relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-gold text-sm font-semibold tracking-wider uppercase flex items-center justify-center gap-2">
-              <Trophy className="h-4 w-4" /> Awards & Recognition
-            </span>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary-foreground mt-3 mb-6">
-              Honoured & Recognised
-            </h2>
-            <p className="text-primary-foreground/70 max-w-3xl mx-auto text-lg leading-relaxed">
-              Honoured &amp; privileged to receive the <span className="text-gold font-semibold">International Business &amp; Education Awards 2026</span> from International Cricketer <span className="text-gold font-semibold">Mr. Suresh Raina</span> at Hyatt Centric, New Delhi — a proud moment on <span className="text-gold font-semibold">11th April 2026</span> for <span className="text-gold font-semibold">Best Global NRI Property Management Company</span>.
-            </p>
-          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  {[about1, about2, about3].map((img, i) => (
+    <div
+      key={i}
+      className="rounded-2xl border border-gold/20 shadow-lg p-3 bg-navy-dark flex items-center justify-center"
+    >
+      <img
+        src={img}
+        alt="Award"
+        className="w-full max-h-[260px] object-contain rounded-xl transition duration-500 hover:scale-105 bg-white"
+      />
+    </div>
+  ))}
+
+</div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-lg group">
