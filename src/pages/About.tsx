@@ -307,7 +307,7 @@ const About = () => {
 
       <div className="space-y-4 text-muted-foreground leading-relaxed">
         <p>
-          BLV Global NRI Asset Management Pvt. Ltd. is a Government of India–incorporated company exclusively focused on the acquisition, legal, financial management, execution, and compliance of NRI assets across Telangana, Andhra Pradesh & Karnataka.
+          BLV Global NRI Asset Management PVT. LTD. is a Government of India–incorporated company exclusively focused on the acquisition, legal, financial management, execution, and compliance of NRI assets across Telangana, Andhra Pradesh & Karnataka.
         </p>
 
         <p>
