@@ -93,7 +93,7 @@ const ServiceDetail = () => {
 {service.taxServices && (
   <>
     <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
-      NRI Tax Filing & Compliance
+      We Do
     </h3>
 
     <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -143,7 +143,7 @@ const ServiceDetail = () => {
 {service.documentSections && (
   <>
     <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
-      Document Management Services
+      We Do
     </h3>
 
     <div className="grid md:grid-cols-2 gap-6">
@@ -173,7 +173,7 @@ const ServiceDetail = () => {
 {service.virtualSections && (
   <>
     <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
-      Virtual Property Experience
+      We Do
     </h3>
 
     <div className="grid md:grid-cols-2 gap-6">
@@ -201,7 +201,7 @@ const ServiceDetail = () => {
 {service.wealthSections && (
   <>
     <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
-      Asset & Wealth Management
+      We Do
     </h3>
 
     <div className="grid md:grid-cols-2 gap-6">

@@ -140,7 +140,7 @@ const geoUrl =
 
                 <FadeIn delay={800} duration={1000}>
                   <p className="text-base md:text-lg text-gray-300 mb-5 max-w-xl" style={{ letterSpacing: '-0.01em' }}>
-                     Your Permanent Presence in India – without being here. 
+                     Your Permanent Presence in India – without being here.<br/>
 
 BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
                   </p>
@@ -198,9 +198,9 @@ BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
       </div>
 
       {/* SUBTEXT (like stat label) */}
-      <div className="text-sm text-primary-foreground/60 leading-snug">
-        {item.subtitle}
-      </div>
+     <div className="text-primary-foreground/60 leading-tight text-[11px] md:text-xs lg:text-sm max-w-[260px] mx-auto text-center">
+  {item.subtitle}
+</div>
 
       {/* EXTRA TEXT */}
       {item.extra && (
@@ -248,7 +248,7 @@ BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
     },
     {
       icon: CheckCircle,
-      title: "Single Point of Contact",
+      title: "Single Point Contact",
       desc: "No multiple follow-ups — one reliable representative in India",
     },
     {
@@ -497,7 +497,7 @@ BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
             {[
               { icon: Phone, label: "+91 9966799225", href: "tel:+919966799225" },
               { icon: Mail, label: "blvglobalnri@gmail.com", href: "mailto:blvglobalnri@gmail.com" },
-              { icon: MapPin, label: "Secunderabad, Telangana", href: "#" },
+              { icon: MapPin, label: "Hyderabad, Telangana", href: "#" },
             ].map((item) => (
               <a
                 key={item.label}

@@ -122,7 +122,7 @@ const faqs = [
     a: "We manage property, legal, compliance, and transactions for NRIs as their authorized representative.",
   },
   {
-    q: "Are you brokers?",
+    q: "Are you Agentss?",
     a: "No. We are professional asset managers focused on responsibility and compliance.",
   },
   {

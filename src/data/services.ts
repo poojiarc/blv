@@ -23,76 +23,7 @@ export interface ServiceData {
 
 export const services: ServiceData[] = [
   // your services here
-  {
-  id: "property-management",
-  title: "Advanced NRI Property Management & Asset Oversight",
-  shortDescription:
-    "Institutional-grade asset management focused on performance and protection.",
-  image: "service-property",
-
-  description:
-    "We deliver advanced property management solutions combining technology, analytics, and on-ground execution for long-term wealth growth.",
-
-  wealthSections: [
-    {
-      title: "Asset Performance Analytics",
-      points: [
-        "ROI tracking",
-        "Market benchmarking",
-        "Performance reports",
-        "Actionable insights",
-      ],
-    },
-    {
-      title: "Smart Monitoring",
-      points: [
-        "CCTV integration",
-        "Remote dashboards",
-        "Real-time alerts",
-        "24/7 monitoring",
-      ],
-    },
-    {
-      title: "Revenue Optimization",
-      points: [
-        "Rental strategy",
-        "Dynamic pricing",
-        "Vacancy reduction",
-        "Income maximization",
-      ],
-    },
-    {
-      title: "Value Enhancement",
-      points: [
-        "Renovation planning",
-        "CapEx budgeting",
-        "Execution support",
-        "Value-add improvements",
-      ],
-    },
-    {
-      title: "Risk & Compliance",
-      points: [
-        "Legal monitoring",
-        "Risk alerts",
-        "Preventive actions",
-        "Compliance tracking",
-      ],
-    },
-    {
-      title: "Portfolio Strategy",
-      points: [
-        "Asset rebalancing",
-        "Buy/sell recommendations",
-        "Diversification",
-        "Wealth optimization",
-      ],
-    },
-  ],
-
-  powerLine:
-    "Advanced property management and asset oversight—focused on performance, protection, and long-term wealth growth.",
-},
+  
   {
   id: "buying-selling",
   title:
@@ -519,7 +450,7 @@ export const services: ServiceData[] = [
         "Drone shots for layout & surroundings",
         "High-detail videos (lighting, space, finish)",
         "Close-up shots of defects",
-        "See beyond what agents or brokers show",
+        "See beyond what agents or Agentss show",
       ],
     },
     {
@@ -856,5 +787,75 @@ export const services: ServiceData[] = [
     "Periodic reporting with transparent updates via WhatsApp and email",
     "Geo-tagged photos and videos"
   ],
-}
+},
+{
+  id: "property-management",
+  title: "Advanced NRI Property Management & Asset Oversight",
+  shortDescription:
+    "Institutional-grade asset management focused on performance and protection.",
+  image: "service-property",
+
+  description:
+    "We deliver advanced property management solutions combining technology, analytics, and on-ground execution for long-term wealth growth.",
+
+  wealthSections: [
+    {
+      title: "Asset Performance Analytics",
+      points: [
+        "ROI tracking",
+        "Market benchmarking",
+        "Performance reports",
+        "Actionable insights",
+      ],
+    },
+    {
+      title: "Smart Monitoring",
+      points: [
+        "CCTV integration",
+        "Remote dashboards",
+        "Real-time alerts",
+        "24/7 monitoring",
+      ],
+    },
+    {
+      title: "Revenue Optimization",
+      points: [
+        "Rental strategy",
+        "Dynamic pricing",
+        "Vacancy reduction",
+        "Income maximization",
+      ],
+    },
+    {
+      title: "Value Enhancement",
+      points: [
+        "Renovation planning",
+        "CapEx budgeting",
+        "Execution support",
+        "Value-add improvements",
+      ],
+    },
+    {
+      title: "Risk & Compliance",
+      points: [
+        "Legal monitoring",
+        "Risk alerts",
+        "Preventive actions",
+        "Compliance tracking",
+      ],
+    },
+    {
+      title: "Portfolio Strategy",
+      points: [
+        "Asset rebalancing",
+        "Buy/sell recommendations",
+        "Diversification",
+        "Wealth optimization",
+      ],
+    },
+  ],
+
+  powerLine:
+    "Advanced property management and asset oversight—focused on performance, protection, and long-term wealth growth.",
+},
 ];

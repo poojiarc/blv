@@ -237,6 +237,48 @@
 import { Shield, Globe, CheckCircle, Eye, Heart, Users, AlertTriangle } from "lucide-react";
 import aboutImg from "@/assets/about 4.jpg";
 const About = () => {
+  const solutions = [
+  {
+    title: "Integrity",
+    desc: "Uncompromised ethics in every transaction and decision",
+  },
+  {
+    title: "Clarity",
+    desc: "Absolute legal transparency and verified ownership",
+  },
+  {
+    title: "Command",
+    desc: "Complete on-ground control and decisive execution",
+  },
+  {
+    title: "Protection",
+    desc: "Safeguarding assets against risk, fraud, and misuse",
+  },
+  {
+    title: "Compliance",
+    desc: "Strict alignment with FEMA, RERA, and all regulations",
+  },
+  {
+    title: "Precision",
+    desc: "Detail-driven execution with zero room for error",
+  },
+  {
+    title: "Authority",
+    desc: "Strong legal, financial, and operational expertise",
+  },
+  {
+    title: "Accountability",
+    desc: "Single-point ownership with full responsibility",
+  },
+  {
+    title: "Transparency",
+    desc: "Clear reporting, communication, and decision visibility",
+  },
+  {
+    title: "Continuity",
+    desc: "Long-term management across the full asset lifecycle",
+  },
+];
   return (
     <div className="min-h-screen pt-20">
       {/* Banner */}
@@ -323,7 +365,7 @@ const About = () => {
               </div>
 
               <p className="text-red-500 font-semibold mt-6 text-sm">
-                Result: Financial loss, legal complications, fraud risk, asset decline, and stress.
+                Result:  Loss of Money, Legal Complications, Risk of Fraud, Encroachment Threats, Compliance Penalties, Execution Failures, Asset Value Decline, Time & Stress Loss, Unreliable Dependency, Exit Challenges.
               </p>
             </div>
 
@@ -333,26 +375,29 @@ const About = () => {
                 <CheckCircle className="h-5 w-5" /> The Solution
               </h3>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                {[
-                  "Integrity",
-                  "Clarity",
-                  "Command",
-                  "Protection",
-                  "Compliance",
-                  "Precision",
-                  "Authority",
-                  "Accountability",
-                  "Transparency",
-                  "Continuity",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-sm font-medium text-foreground">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-red-500 font-semibold mt-6 text-sm">
+             <div className="grid sm:grid-cols-2 gap-6">
+  {solutions.map((item, index) => (
+    <div
+      key={index}
+      className="border border-green-500/20 rounded-xl p-5 hover:bg-green-500/5 transition"
+    >
+      <div className="flex items-start gap-3">
+        <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
+
+        <div>
+          <h4 className="text-sm font-semibold text-foreground">
+            {index + 1}. {item.title}
+          </h4>
+
+          <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+              <p className="text-green-500 font-semibold mt-6 text-sm">
                The Result: You Deserve-
 Your investments in India evolve into growth, strength, and enduring peace of mind—guided by expertise, driven by precision, and delivering lasting success.
               </p>
@@ -370,7 +415,7 @@ Your investments in India evolve into growth, strength, and enduring peace of mi
             </p>
 
             <p className="text-muted-foreground mb-6">
-              We do not follow commission-based brokerage models. Our pricing reflects scope, legal responsibility, time involvement, and accountability.
+              We do not follow commission-based Agentsage models. Our pricing reflects scope, legal responsibility, time involvement, and Professional accountability.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
@@ -407,9 +452,13 @@ Your investments in India evolve into growth, strength, and enduring peace of mi
               {[
                 "8+ Years of Professional Expertise",
                 "90+ Successfully Completed NRI Projects",
-                "Government & FEMA Registered Company (GOVT.Of INDIA, FEMA & RERA-REGD. Company)",
+                <>
+  Government & FEMA Registered Company
+  <br />
+  (GOVT. OF INDIA, FEMA & RERA-REGD. Company)
+</>,
                 "Property Buy & Sell, Legal, Financial & Compliance — All Under One Trusted Point of Contact.",
-                "Directors with  Strong Engineering, Technical & Field Expertise",
+                "Directors with Civil & Structural expertise, driven by technical precision and field excellence.",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 glass-card">
                   <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-0.5" />
@@ -441,7 +490,7 @@ Your investments in India evolve into growth, strength, and enduring peace of mi
               </div>
               <h3 className="font-serif text-xl font-bold text-foreground mb-4">Our Commitment</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                At BLV Global, we don't just manage assets — we maintain relationships. We act as your trusted representative in India, Greeting your assets as ours. From routine management to critical decisions, we ensure clarity, control, and confidence at every step.
+                At BLV Global, we don't just manage assets — we maintain relationships. We act as your trusted representative in India, Treating your assets as ours. From routine management to critical decisions, we ensure clarity, control, and confidence at every step.
               </p>
             </div>
           </div>

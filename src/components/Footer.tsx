@@ -23,30 +23,10 @@ const Footer = () => {
               Your Trusted Partner for End-to-End NRI Property & Asset Management in India.
             </p>
             <p className="text-sm mt-3 text-gold font-medium">
-              Government & FEMA Registered
+              Government, FEMA & RERA Registered.
             </p>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-3 mt-4">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#25D366]/20 flex items-center justify-center hover:bg-[#25D366]/40 transition-colors"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp className="h-6 w-6 text-[#25D366]" />
-              </a>
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-pink-500/20 flex items-center justify-center hover:bg-pink-500/40 transition-colors"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="h-6 w-6 text-pink-400" />
-              </a>
-            </div>
+            
           </div>
           <div>
             <h4 className="font-serif text-lg text-primary-foreground mb-4">Quick Links</h4>
@@ -80,7 +60,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-primary-foreground/60">
                 <MapPin className="h-4 w-4 text-gold mt-0.5 shrink-0" />
-                <span>Secunderabad, Telangana, India</span>
+                <span>Hyderabad, Telangana, India</span>
               </div>
             </div>
           </div>
