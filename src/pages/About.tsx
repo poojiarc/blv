@@ -297,7 +297,7 @@ const About = () => {
 
           {/* ABOUT */}
          <div className="glass-card p-8 md:p-12 mb-12">
-  <div className="grid md:grid-cols-2 gap-10 items-center">
+  <div className="max-w-5xl mx-auto text-center">
 
     {/* LEFT TEXT */}
     <div>
@@ -316,14 +316,7 @@ const About = () => {
       </div>
     </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="w-full">
-      <img
-    src={aboutImg}
-    alt="About BLV Global"
-    className="max-h-[420px] object-contain rounded-2xl shadow-2xl transition duration-500 bg-white"
-  />
-    </div>
+    
 
   </div>
 </div>

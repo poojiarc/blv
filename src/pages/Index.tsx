@@ -19,7 +19,7 @@ import serviceDocument from "@/assets/service-document.jpg";
 import serviceElderly from "@/assets/service-elderly.jpg";
 import about1 from "@/assets/about 1.jpg";
 import about2 from "@/assets/about 2.jpg";
-import about3 from "@/assets/about 3.jpg";
+import about4 from "@/assets/about 4.jpg";
 
 const imageMap: Record<string, string> = {
   "service-property": serviceProperty,
@@ -304,7 +304,7 @@ BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
         <div className="max-w-6xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-  {[about1, about2, about3].map((img, i) => (
+  {[about1, about2].map((img, i) => (
     <div
       key={i}
       className="rounded-2xl border border-gold/20 shadow-lg p-3 bg-navy-dark flex items-center justify-center"
@@ -312,7 +312,7 @@ BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
       <img
         src={img}
         alt="Award"
-        className="w-full max-h-[260px] object-contain rounded-xl transition duration-500 hover:scale-105 bg-white"
+        className="w-full h-[260px] object-contain bg-white rounded-xl transition duration-500 hover:scale-105"
       />
     </div>
   ))}
@@ -324,7 +324,7 @@ BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
               <img
                 src={awardCeremony}
                 alt="PVR Vagesh Datt receiving International Business & Education Award 2026 from Suresh Raina"
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-[260px] object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 width={800}
                 height={600}
@@ -340,9 +340,9 @@ BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
 
             <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-lg group">
               <img
-                src={awardNews}
+                src={about4}
                 alt="Telangana News Spot coverage of BLV Global NRI Award"
-                className="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-80 object-contain bg-navy-dark group-hover:scale-105 tranition-transform duration-500"
                 loading="lazy"
                 width={800}
                 height={600}
