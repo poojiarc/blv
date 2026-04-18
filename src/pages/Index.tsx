@@ -79,11 +79,17 @@ const stats = [
   value: "3",
   label: (
     <>
-      STATES:{" "}
-      <span className="text-gold font-medium">
-        TELANGANA, ANDHRA PRADESH, KARNATAKA
-      </span>
-    </>
+  <div>
+    STATES:{" "}
+    <span className="text-gold font-medium">
+      TELANGANA
+    </span>
+  </div>
+
+  <div className="text-gold font-medium leading-tight">
+    ANDHRA PRADESH, KARNATAKA
+  </div>
+</>
   ),
 },
   { value:"100%", label: "FEMA Compliant" },
@@ -141,7 +147,6 @@ const geoUrl =
                 <FadeIn delay={800} duration={1000}>
                   <p className="text-base md:text-lg text-gray-300 mb-5 max-w-xl" style={{ letterSpacing: '-0.01em' }}>
                      Your Permanent Presence in India – without being here.<br/>
-
 BLV GLOBAL NRI- A fully integrated ecosystem for your Indian real estate.
                   </p>
                 </FadeIn>
