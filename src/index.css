@@ -99,7 +99,17 @@
     font-family: 'Playfair Display', serif;
   }
 }
+/* Use clean modern font everywhere */
+/* Only fix numbers */
+.stat-number {
+  font-family: 'Inter', font-serif;
+  font-variant-numeric: lining-nums;
+}
 
+/* Fix numbers (important) */
+* {
+  font-variant-numeric: lining-nums;
+}
 @layer components {
   .glass-card {
     @apply bg-card/80 backdrop-blur-md border border-border/50 rounded-xl;

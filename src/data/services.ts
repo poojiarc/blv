@@ -1816,70 +1816,89 @@ export const services: ServiceData[] = [
     image: "service-legal",
     description: "We handle every legal and documentation aspect of your property transactions with accuracy, compliance, and accountability.",
     wealthSections: [
-      {
-        title: "Legal Due Diligence",
-        points: [
-          "Title verification",
-          "Encumbrance certificate check",
-          "Land use validation",
-          "Litigation background check",
-        ],
-      },
-      {
-        title: "Document Validation",
-        points: [
-          "Collecting seller/builder documents",
-          "Cross-verification",
-          "Identifying missing documents",
-          "Transaction-ready file preparation",
-        ],
-      },
-      {
-        title: "Regulatory Compliance",
-        points: [
-          "RERA verification",
-          "Approval checks",
-          "Legal construction validation",
-          "Local law compliance",
-        ],
-      },
-      {
-        title: "Agreement Drafting & Review",
-        points: [
-          "Agreement to Sale drafting",
-          "Builder agreement review",
-          "Clause protection",
-          "Negotiation support",
-        ],
-      },
-      {
-        title: "Tax & Financial Compliance",
-        points: [
-          "TDS handling",
-          "Form 15CA / 15CB",
-          "Capital gains documentation",
-          "PAN & KYC compliance",
-        ],
-      },
-      {
-        title: "Post-Registration Compliance",
-        points: [
-          "Mutation / Khata transfer",
-          "Tax ownership updates",
-          "Utility transfers",
-          "Society updates",
-        ],
-      },
-      {
-        title: "Risk & Litigation Support",
-        points: [
-          "Fraud prevention",
-          "Legal advisory",
-          "Court coordination",
-          "Lawyer liaison",
-        ],
-      },
+  {
+    title: "Legal Due Diligence",
+    points: [
+      "Title verification (clear ownership check)",
+      "Encumbrance certificate (EC) verification",
+      "Land use & zoning validation",
+      "Approval checks (layout, building permissions)",
+      "Litigation / dispute background check",
     ],
+  },
+  {
+    title: "Document Collection & Validation",
+    points: [
+      "Collecting all documents from seller/builder",
+      "Cross-verification of originals",
+      "Identifying missing/inconsistent documents",
+      "Transaction-ready file preparation",
+    ],
+  },
+  {
+    title: "Regulatory Compliance",
+    points: [
+      "RERA verification",
+      "Approval & permission checks",
+      "Construction legality validation",
+      "Local/state law compliance",
+    ],
+  },
+  {
+    title: "Agreement Drafting & Review",
+    points: [
+      "Agreement to Sale drafting",
+      "Builder agreement / sale deed review",
+      "Clause protection for NRI",
+      "Negotiation support",
+    ],
+  },
+  {
+    title: "Power of Attorney (PoA) Setup",
+    points: [
+      "Drafting GPA / SPA",
+      "Attestation & apostille coordination",
+      "Adjudication & registration in India",
+      "Acting as authorized representative",
+    ],
+  },
+  {
+    title: "Financial & Tax Compliance",
+    points: [
+      "TDS compliance",
+      "Form 15CA / 15CB",
+      "Capital gains documentation",
+      "PAN & KYC compliance",
+    ],
+  },
+  {
+    title: "Registration & Stamp Duty Compliance",
+    points: [
+      "Stamp duty calculation & payment",
+      "Registration scheduling",
+      "Sale deed execution",
+      "Sub-Registrar handling",
+    ],
+  },
+  {
+    title: "Post-Registration Compliance",
+    points: [
+      "Mutation / Khata transfer",
+      "Property tax update",
+      "Utility transfers",
+      "Society updates",
+    ],
+  },
+  {
+    title: "Risk Advisory & Litigation Support",
+    points: [
+      "Fraud prevention checks",
+      "Legal advisory",
+      "Court coordination",
+      "Lawyer liaison",
+    ],
+  },
+],
     powerLine: "From verification to registration to compliance—we manage every legal detail of your property in India.",
   },
   {
@@ -1889,75 +1908,85 @@ export const services: ServiceData[] = [
     image: "service-gpa",
     description: "We provide comprehensive Power of Attorney solutions tailored for NRIs, enabling secure, compliant, and fully controlled execution of property, financial, and legal matters in India.",
     wealthSections: [
-      {
-        title: "Types of Power of Attorney",
-        points: [
-          "General Power of Attorney (GPA)",
-          "Special Power of Attorney (SPA)",
-          "Durable Power of Attorney",
-          "Non-Durable Power of Attorney",
-          "Revocable Power of Attorney",
-          "Irrevocable Power of Attorney",
-          "Property-Specific Power of Attorney",
-          "Banking / Financial Power of Attorney",
-          "Legal / Litigation Power of Attorney",
-        ],
-      },
-      {
-        title: "POA Advisory & Structuring",
-        points: [
-          "GPA vs SPA guidance",
-          "Scope definition",
-          "Risk limitation structuring",
-          "Protection-focused drafting strategy",
-        ],
-      },
-      {
-        title: "Drafting of GPA / SPA",
-        points: [
-          "Property transactions",
-          "Banking & financial authority",
-          "Rental & management use",
-          "Court representation",
-        ],
-      },
-      {
-        title: "Attestation & Apostille",
-        points: [
-          "Notary & embassy attestation",
-          "Apostille coordination",
-          "Country-specific compliance",
-          "End-to-end handling",
-        ],
-      },
-      {
-        title: "Registration in India",
-        points: [
-          "Stamp duty & adjudication",
-          "Sub-registrar registration",
-          "State compliance handling",
-          "On-ground execution",
-        ],
-      },
-      {
-        title: "Execution & Representation",
-        points: [
-          "Signing agreements",
-          "Handling property transactions",
-          "Banking coordination",
-          "Authority-based execution",
-        ],
-      },
-      {
-        title: "Monitoring & Control",
-        points: [
-          "POA usage tracking",
-          "Misuse prevention",
-          "Revocation support",
-          "Lifecycle management",
-        ],
-      },
+  {
+    title: "Types of Power of Attorney",
+    points: [
+      "General Power of Attorney (GPA) – broad authority across activities",
+      "Special Power of Attorney (SPA) – specific transaction-based authority",
+      "Durable Power of Attorney – valid even during incapacity",
+      "Non-Durable Power of Attorney – short-term authority",
+      "Revocable Power of Attorney – can be cancelled anytime",
+      "Irrevocable Power of Attorney – fixed for contractual interest",
+      "Property-Specific Power of Attorney – for real estate transactions",
+      "Banking / Financial Power of Attorney – account & fund handling",
+      "Legal / Litigation Power of Attorney – court & legal representation",
     ],
+  },
+  {
+    title: "Power of Attorney Advisory & Structuring",
+    points: [
+      "GPA vs SPA guidance",
+      "Scope definition",
+      "Risk limitation structuring",
+      "Protection-focused drafting",
+    ],
+  },
+  {
+    title: "Drafting of GPA / SPA",
+    points: [
+      "Property transactions",
+      "Rental & management",
+      "Banking & financial authority",
+      "Court representation",
+      "Clear authority clauses",
+    ],
+  },
+  {
+    title: "Attestation & Apostille",
+    points: [
+      "Notary & embassy attestation",
+      "Apostille coordination",
+      "Country-specific compliance",
+      "End-to-end handling",
+    ],
+  },
+  {
+    title: "Registration in India",
+    points: [
+      "Stamp duty & adjudication",
+      "Sub-Registrar registration",
+      "State compliance",
+      "On-ground execution",
+    ],
+  },
+  {
+    title: "Execution & Representation",
+    points: [
+      "Signing agreements",
+      "Property transaction handling",
+      "Bank coordination",
+      "Authority execution",
+    ],
+  },
+  {
+    title: "POA Monitoring & Control",
+    points: [
+      "Usage tracking",
+      "Misuse prevention",
+      "Revocation support",
+      "Lifecycle management",
+    ],
+  },
+  {
+    title: "Multi-POA Management",
+    points: [
+      "Managing multiple POAs",
+      "Central tracking",
+      "Integration with transactions",
+      "Long-term lifecycle handling",
+    ],
+  },
+],
     powerLine: "Authorize with confidence—your property, transactions, and legal matters handled seamlessly in India.",
   },
   {
@@ -1967,79 +1996,79 @@ export const services: ServiceData[] = [
     image: "service-finance",
     description: "We provide end-to-end financial and banking solutions tailored for NRIs, ensuring compliant, transparent, and optimized handling of funds across property investments in India.",
     wealthSections: [
-      {
-        title: "NRE / NRO Account Setup & Management",
-        points: [
-          "Assistance in opening NRE / NRO accounts",
-          "Account structuring based on investment goals",
-          "Ongoing banking coordination",
-          "KYC & compliance updates",
-        ],
-      },
-      {
-        title: "Property Investment Fund Planning",
-        points: [
-          "Budget planning for property purchase",
-          "Fund allocation strategy",
-          "Investment structuring for returns",
-          "Advisory on timing & location",
-        ],
-      },
-      {
-        title: "Loan & Financing Assistance",
-        points: [
-          "NRI home loan eligibility guidance",
-          "Loan processing & documentation",
-          "Bank coordination & approvals",
-          "EMI structuring",
-        ],
-      },
-      {
-        title: "Transaction Structuring & Payment Handling",
-        points: [
-          "Stage-wise payment planning",
-          "Buyer/seller fund flow handling",
-          "Secure execution of transactions",
-          "Error-free payment coordination",
-        ],
-      },
-      {
-        title: "Repatriation & Fund Movement",
-        points: [
-          "Outward remittance planning",
-          "RBI compliance handling",
-          "Documentation coordination",
-          "Efficient fund transfer strategy",
-        ],
-      },
-      {
-        title: "Tax & Financial Structuring",
-        points: [
-          "Capital gains planning",
-          "TDS optimization",
-          "Tax-integrated structuring",
-          "Maximizing net returns",
-        ],
-      },
-      {
-        title: "Forex & Currency Optimization",
-        points: [
-          "Exchange rate timing strategy",
-          "USD ⇄ INR advisory",
-          "Forex cost reduction",
-          "Value maximization in transfers",
-        ],
-      },
-      {
-        title: "Financial Reporting & Transparency",
-        points: [
-          "Investment performance tracking",
-          "Cash flow visibility",
-          "Profitability reports",
-          "Full financial transparency",
-        ],
-      },
+  {
+    title: "NRE / NRO Account Setup & Management",
+    points: [
+      "Account opening assistance",
+      "Investment-based structuring",
+      "Bank coordination",
+      "KYC compliance",
     ],
+  },
+  {
+    title: "Property Investment Fund Planning",
+    points: [
+      "Budget planning",
+      "Fund allocation strategy",
+      "Return-focused structuring",
+      "Timing advisory",
+    ],
+  },
+  {
+    title: "Loan & Financing Assistance",
+    points: [
+      "NRI home loan advisory",
+      "Loan processing",
+      "Bank approvals",
+      "EMI structuring",
+    ],
+  },
+  {
+    title: "Transaction Structuring & Payments",
+    points: [
+      "Stage-wise payments",
+      "Fund flow handling",
+      "Secure transactions",
+      "Error-free coordination",
+    ],
+  },
+  {
+    title: "Repatriation Planning",
+    points: [
+      "Outward remittance planning",
+      "RBI compliance",
+      "Documentation handling",
+      "Efficient transfers",
+    ],
+  },
+  {
+    title: "Financial Structuring",
+    points: [
+      "Capital gains planning",
+      "TDS optimization",
+      "Tax-integrated structuring",
+      "Return maximization",
+    ],
+  },
+  {
+    title: "Forex Optimization",
+    points: [
+      "Exchange timing strategy",
+      "USD ⇄ INR advisory",
+      "Forex cost reduction",
+      "Value maximization",
+    ],
+  },
+  {
+    title: "Financial Reporting",
+    points: [
+      "Performance tracking",
+      "Cash flow visibility",
+      "Profit reports",
+      "Full transparency",
+    ],
+  },
+],
     powerLine: "From funding to profit realization—complete financial control over your real estate investments in India.",
   },
   {
@@ -2491,61 +2520,70 @@ export const services: ServiceData[] = [
     image: "service-property",
     description: "We deliver advanced property management solutions combining technology, analytics, and on-ground execution for long-term wealth growth.",
     wealthSections: [
-      {
-        title: "Asset Performance Analytics",
-        points: [
-          "ROI tracking",
-          "Market benchmarking",
-          "Performance reports",
-          "Actionable insights",
-        ],
-      },
-      {
-        title: "Smart Monitoring",
-        points: [
-          "CCTV integration",
-          "Remote dashboards",
-          "Real-time alerts",
-          "24/7 monitoring",
-        ],
-      },
-      {
-        title: "Revenue Optimization",
-        points: [
-          "Rental strategy",
-          "Dynamic pricing",
-          "Vacancy reduction",
-          "Income maximization",
-        ],
-      },
-      {
-        title: "Value Enhancement",
-        points: [
-          "Renovation planning",
-          "CapEx budgeting",
-          "Execution support",
-          "Value-add improvements",
-        ],
-      },
-      {
-        title: "Risk & Compliance",
-        points: [
-          "Legal monitoring",
-          "Risk alerts",
-          "Preventive actions",
-          "Compliance tracking",
-        ],
-      },
-      {
-        title: "Portfolio Strategy",
-        points: [
-          "Asset rebalancing",
-          "Buy/sell recommendations",
-          "Diversification",
-          "Wealth optimization",
-        ],
-      },
+  {
+    title: "Asset Performance Analytics",
+    points: [
+      "ROI tracking",
+      "Performance reports",
+      "Market benchmarking",
+      "Actionable insights",
     ],
+  },
+  {
+    title: "Smart Property Monitoring",
+    points: [
+      "CCTV integration",
+      "Remote dashboards",
+      "Real-time alerts",
+      "24/7 monitoring",
+    ],
+  },
+  {
+    title: "Revenue Maximization",
+    points: [
+      "Rental strategy",
+      "Dynamic pricing",
+      "Vacancy reduction",
+      "Income growth",
+    ],
+  },
+  {
+    title: "Value Enhancement",
+    points: [
+      "Renovation planning",
+      "CapEx budgeting",
+      "Execution support",
+      "Value improvements",
+    ],
+  },
+  {
+    title: "Risk & Compliance Intelligence",
+    points: [
+      "Legal monitoring",
+      "Compliance alerts",
+      "Risk flags",
+      "Preventive actions",
+    ],
+  },
+  {
+    title: "Portfolio Strategy",
+    points: [
+      "Asset rebalancing",
+      "Buy/sell strategy",
+      "Diversification",
+      "Wealth optimization",
+    ],
+  },
+  {
+    title: "Exit Strategy",
+    points: [
+      "Pre-sale preparation",
+      "Market timing",
+      "Premium positioning",
+      "Maximized returns",
+    ],
+  },
+],
     powerLine: "Advanced property management and asset oversight—focused on performance, protection, and long-term wealth growth.",
   },
 ];

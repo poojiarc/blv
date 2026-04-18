@@ -204,10 +204,7 @@ const Services = () => {
           What We Do
         </span>
         <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground mt-3 mb-6">
-          OUR{" "}
-          <span className="inline-block text-[1.25em] leading-none align-baseline">
-            11
-          </span>{" "}
+          OUR 11
           SERVICE PILLARS
         </h1>
         <p className="text-primary-foreground/70 max-w-3xl mx-auto text-lg">

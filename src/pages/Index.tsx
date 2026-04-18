@@ -670,16 +670,18 @@ const Index = () => {
     { value: "8+", label: "Years Experience" },
     { value: "90+", label: "Projects Completed" },
     {
-      value: "3",
-      label: (
-        <>
-          STATES:{" "}
-          <span className="text-gold font-medium">
-            TELANGANA, ANDHRA PRADESH, KARNATAKA
-          </span>
-        </>
-      ),
-    },
+value: "3 STATES",
+  label: (
+    <div className="text-primary-foreground/60 leading-tight">
+      <div className="font-medium text-primary-foreground">
+         TELANGANA
+      </div>
+      <div className="text-primary-foreground">
+        ANDHRA PRADESH, KARNATAKA
+      </div>
+    </div>
+  ),
+},
     { value: "100%", label: "FEMA Compliant" },
   ];
 
@@ -958,8 +960,7 @@ const Index = () => {
                     </span>
                   </div>
                   <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                    Featured in Telangana News Spot — Best Global NRI Property
-                    Management Company.
+                    Telangana global elite business award 2026 for Best NRI property asset management company of the year – India.
                   </p>
                 </div>
               </div>
