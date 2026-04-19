@@ -897,87 +897,96 @@ value: "3 STATES",
 
       {/* AWARDS & RECOGNITION (Natural Size Layout) */}
       <section className="section-padding bg-navy relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 md:px-0">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-            {/* LEFT COLUMN */}
-            <div className="md:col-span-2 flex flex-col gap-6">
-              <div className="rounded-2xl border border-gold/20 shadow-lg bg-black/40 overflow-hidden group">
-                <img
-                  src={about1}
-                  alt="Award Ceremony Group"
-                  className="w-full h-auto max-h-[350px] object-contain transition duration-500 group-hover:scale-105"
-                />
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
 
-              <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-lg bg-navy-dark group">
-                <div className="overflow-hidden bg-black/40">
-                  <img
-                    src={awardCeremony}
-                    alt="PVR Vagesh Datt receiving International Business & Education Award 2026"
-                    className="w-full h-auto max-h-[350px] object-contain transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-5 md:p-6 bg-navy-dark relative z-10">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="h-5 w-5 text-gold flex-shrink-0" />
-                    <span className="text-gold font-semibold text-sm line-clamp-1">
-                      International Business & Education Awards 2026
-                    </span>
-                  </div>
-                  <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                    PVR Vagesh Datt, Founder & Managing Director, receiving the
-                    award at Hyatt Centric, New Delhi.
-                  </p>
-                </div>
-              </div>
-            </div>
+  {/* ✅ TOP ROW (about1 + about2) */}
+  <div className="md:col-span-2 rounded-2xl border border-gold/20 shadow-lg bg-black/40 overflow-hidden group">
+    <img
+      src={about1}
+      alt="Award Ceremony Group"
+      className="w-full h-auto max-h-[350px] object-contain transition duration-500 group-hover:scale-105"
+    />
+  </div>
 
-            {/* RIGHT COLUMN */}
-            <div className="md:col-span-1 flex flex-col gap-6">
-              <div className="rounded-2xl border border-gold/20 shadow-lg bg-black/40 overflow-hidden group">
-                <img
-                  src={about2}
-                  alt="Award Recognition Duo"
-                  className="w-full h-auto max-h-[350px] object-contain transition duration-500 group-hover:scale-105"
-                />
-              </div>
+  <div className="rounded-2xl border border-gold/20 shadow-lg bg-black/40 overflow-hidden group">
+    <img
+      src={about2}
+      alt="Award Recognition Duo"
+      className="w-full h-auto max-h-[350px] object-contain transition duration-500 group-hover:scale-105"
+    />
+  </div>
 
-              <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-lg bg-navy-dark group">
-                <div className="overflow-hidden bg-black/40">
-                  <img
-                    src={about4}
-                    alt="Media Recognition"
-                    className="w-full h-auto max-h-[350px] object-contain transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-5 md:p-6 bg-navy-dark relative z-10">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Trophy className="h-5 w-5 text-gold flex-shrink-0" />
-                    <span className="text-gold font-semibold text-sm line-clamp-1">
-                      Media Recognition
-                    </span>
-                  </div>
-                  <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                    Telangana global elite business award 2026 for Best NRI property asset management company of the year – India.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* ✅ MESSAGE FULL ROW */}
+  <div className="md:col-span-3 flex justify-center">
+    <div className="max-w-3xl w-full rounded-2xl border border-gold/20 bg-navy-dark shadow-lg p-6 text-center">
 
-          <div className="mt-10 flex justify-center w-full">
-            <div className="liquid-glass border border-gold/20 px-8 py-5 rounded-2xl text-center shadow-2xl bg-black/20 backdrop-blur-sm w-full md:w-auto">
-              <p className="text-primary-foreground font-serif text-lg md:text-xl font-semibold">
-                🏆 Best Global NRI Property Management Company — 2026
-              </p>
-              <p className="text-primary-foreground/50 text-sm mt-2">
-                International Business & Education Awards, New Delhi
-              </p>
-            </div>
-          </div>
-        </div>
+      <p className="text-primary-foreground/80 text-sm md:text-base leading-relaxed">
+        Honoured & privileged to receive the International Business & Education Awards 2026 from{" "}
+        <span className="text-gold font-semibold">
+          International Cricketer Mr. Suresh Raina
+        </span>{" "}
+        at{" "}
+        <span className="text-gold font-medium">
+          Hyatt Centric New Delhi
+        </span>{" "}
+        — a proud moment on{" "}
+        <span className="font-medium">11th April 2026</span> for{" "}
+        <span className="text-gold font-medium">
+          Best Global NRI Property Management Company
+        </span>.
+      </p>
+
+    </div>
+  </div>
+
+  {/* ✅ BOTTOM ROW */}
+  <div className="md:col-span-2 rounded-2xl overflow-hidden border border-gold/20 shadow-lg bg-navy-dark group">
+    <div className="overflow-hidden bg-black/40">
+      <img
+        src={awardCeremony}
+        alt="Award Ceremony"
+        className="w-full h-auto max-h-[350px] object-contain transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-5 md:p-6 bg-navy-dark">
+      <div className="flex items-center gap-2 mb-2">
+        <Award className="h-5 w-5 text-gold" />
+        <span className="text-gold font-semibold text-sm">
+          International Business & Education Awards 2026
+        </span>
+      </div>
+
+      <p className="text-primary-foreground/70 text-sm">
+        PVR Vagesh Datt, Founder & Managing Director, receiving the award at Hyatt Centric, New Delhi.
+      </p>
+    </div>
+  </div>
+
+  <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-lg bg-navy-dark group">
+    <div className="overflow-hidden bg-black/40">
+      <img
+        src={about4}
+        alt="Media Recognition"
+        className="w-full h-auto max-h-[350px] object-contain transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-5 md:p-6 bg-navy-dark">
+      <div className="flex items-center gap-2 mb-2">
+        <Trophy className="h-5 w-5 text-gold" />
+        <span className="text-gold font-semibold text-sm">
+          Media Recognition
+        </span>
+      </div>
+
+      <p className="text-primary-foreground/70 text-sm">
+        Telangana global elite business award 2026 for Best NRI property asset management company of the year – India.
+      </p>
+    </div>
+  </div>
+
+</div>
       </section>
 
       {/* OUR PRESENCE — South India Map */}
