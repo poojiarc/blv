@@ -63,12 +63,13 @@ const testimonials: Testimonial[] = [
     review: "Despite the time difference, BLV Global NRI was always available and responsive. Their commitment to providing support across time zones made communication effortless. I never felt disconnected from the process.",
     gender: "male",
   },
-  {
-    name: "Arjun Rao Raagam",
-    role: "Dubai, UAE",
-    category: "Complete NRI Property Management",
-    review: "BLV Global NRI offers a complete ecosystem for NRIs—from property acquisition and legal verification to documentation, custody, and transaction management. Their strong local presence and professional execution make them a one-stop solution for real estate in India.",
+   {
+    name: "G. Rohit Rao",
+    role: "Software Engineer | Dallas, USA",
+    category: "Complete Turnkey Experience",
+    review: "From finding the perfect apartment to completing interiors and placing a reliable tenant, BLV Global NRI handled everything end-to-end. Their structured approach and regular management ensure I receive rental income smoothly every month without any involvement.",
     gender: "male",
+    image: testimonialRohit,
   },
   {
     name: "Naveen Goud Cherukuri",
@@ -91,13 +92,12 @@ const testimonials: Testimonial[] = [
     review: "BLV Global NRI delivered a complete premium experience—from identifying a high-rise gated community apartment to executing interiors and managing tenants. Their proactive updates and smooth rental handling make them highly dependable.",
     gender: "male",
   },
-  {
-    name: "G. Rohit Rao",
-    role: "Software Engineer | Dallas, USA",
-    category: "Complete Turnkey Experience",
-    review: "From finding the perfect apartment to completing interiors and placing a reliable tenant, BLV Global NRI handled everything end-to-end. Their structured approach and regular management ensure I receive rental income smoothly every month without any involvement.",
+{
+    name: "Arjun Rao Raagam",
+    role: "Dubai, UAE",
+    category: "Complete NRI Property Management",
+    review: "BLV Global NRI offers a complete ecosystem for NRIs—from property acquisition and legal verification to documentation, custody, and transaction management. Their strong local presence and professional execution make them a one-stop solution for real estate in India.",
     gender: "male",
-    image: testimonialRohit,
   },
   {
     name: "Raaman Iyer",
