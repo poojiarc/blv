@@ -918,9 +918,16 @@ value: "3 STATES",
 
   {/* ✅ MESSAGE FULL ROW */}
   <div className="md:col-span-3 flex justify-center">
-    <div className="max-w-3xl w-full rounded-2xl border border-gold/20 bg-navy-dark shadow-lg p-6 text-center">
+    <div className="md:col-span-3 flex justify-center">
+  <div className="max-w-3xl w-full rounded-2xl border border-gold/20 bg-navy-dark shadow-lg p-6 text-center">
 
-      <p className="text-primary-foreground/80 text-sm md:text-base leading-relaxed">
+    <p className="text-primary-foreground/80 text-sm md:text-base leading-relaxed flex items-start justify-center gap-2">
+      
+      {/* ✅ ICON INLINE */}
+      <Award className="h-5 w-5 text-gold mt-1 flex-shrink-0" />
+
+      {/* ✅ TEXT */}
+      <span>
         Honoured & privileged to receive the International Business & Education Awards 2026 from{" "}
         <span className="text-gold font-semibold">
           International Cricketer Mr. Suresh Raina
@@ -934,9 +941,12 @@ value: "3 STATES",
         <span className="text-gold font-medium">
           Best Global NRI Property Management Company
         </span>.
-      </p>
+      </span>
 
-    </div>
+    </p>
+
+  </div>
+</div>
   </div>
 
   {/* ✅ BOTTOM ROW */}
@@ -981,7 +991,7 @@ value: "3 STATES",
       </div>
 
       <p className="text-primary-foreground/70 text-sm">
-        Telangana global elite business award 2026 for Best NRI property asset management company of the year – India.
+        Telangana Global Elite Business Award 2026 for Best NRI Property Asset Management Company of the Year-India.
       </p>
     </div>
   </div>

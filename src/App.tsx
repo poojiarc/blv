@@ -37,7 +37,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-        <FloatingSocial />
+        
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

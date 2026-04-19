@@ -451,7 +451,7 @@ Your investments in India evolve into growth, strength, and enduring peace of mi
   (GOVT. OF INDIA, FEMA & RERA-REGD. Company)
 </>,
                 "Property Buy & Sell, Legal, Financial & Compliance — All Under One Trusted Point of Contact.",
-                "Directors with Civil & Structural expertise, driven by technical precision and field excellence.",
+                "Directors with  Civil & Structural Engineering Expertise, driven by technical precision and field excellence.",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 p-4 glass-card">
                   <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-0.5" />

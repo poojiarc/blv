@@ -2326,168 +2326,168 @@ export const services: ServiceData[] = [
     ],
   },
   {
-    id: "nri-tax-filing",
-    title: "NRI Tax Filing & End-to-End Financial Compliance",
-    shortDescription: "Comprehensive tax filing, compliance, and fund repatriation services for NRIs.",
-    image: "service-registration",
-    description: "We provide complete NRI tax filing, compliance, and fund repatriation services with full transparency, accuracy, and regulatory alignment.",
-    taxServices: [
-      {
-        title: "Income Tax Return (ITR) Filing",
-        points: [
-          "Accurate ITR filing for NRI individuals",
-          "Handling multiple income sources (rent, capital gains, interest)",
-          "Compliance with latest tax regulations",
-        ],
-      },
-      {
-        title: "Rental Income Tax Management",
-        points: [
-          "Tax computation on rental income",
-          "Deduction optimization",
-          "TDS compliance & adjustments",
-        ],
-      },
-      {
-        title: "Capital Gains Tax Advisory",
-        points: [
-          "Tax calculation on property sale",
-          "Short-term & long-term capital gains",
-          "Reinvestment guidance",
-        ],
-      },
-      {
-        title: "TDS Compliance & Refunds",
-        points: [
-          "TDS verification & reconciliation",
-          "Lower/Nil TDS certificate assistance",
-          "Refund processing",
-        ],
-      },
-      {
-        title: "DTAA (Double Taxation Relief)",
-        points: [
-          "Avoid double taxation",
-          "DTAA benefits",
-          "Foreign income reporting",
-        ],
-      },
-      {
-        title: "Tax Planning & Optimization",
-        points: [
-          "Strategic tax planning",
-          "Investment structuring",
-          "Year-round advisory",
-        ],
-      },
-      {
-        title: "Notice Handling",
-        points: [
-          "Income tax notice response",
-          "Documentation drafting",
-          "Authority coordination",
-        ],
-      },
-      {
-        title: "Documentation Support",
-        points: [
-          "PAN & Aadhaar linkage",
-          "NRO/NRE compliance",
-          "Full documentation handling",
-        ],
-      },
-      {
-        title: "Remote Tax Filing",
-        points: [
-          "Fully remote processing",
-          "Secure document handling",
-          "Digital updates",
-        ],
-      },
-    ],
-    repatriationServices: [
-      {
-        title: "End-to-End Fund Repatriation",
-        points: [
-          "India ⇄ USA transfers",
-          "Full compliance handling",
-          "Bank coordination",
-        ],
-      },
-      {
-        title: "NRO → NRE Transfer",
-        points: [
-          "Fund transfer support",
-          "USD 1M limit handling",
-          "Documentation support",
-        ],
-      },
-      {
-        title: "Form 15CA & 15CB",
-        points: [
-          "Form preparation",
-          "CA certification",
-          "Compliance verification",
-        ],
-      },
-      {
-        title: "FEMA & LRS Advisory",
-        points: [
-          "FEMA compliance",
-          "LRS guidance",
-          "Legal structuring",
-        ],
-      },
-      {
-        title: "Tax Clearance",
-        points: [
-          "Capital gains compliance",
-          "TDS verification",
-          "Documentation handling",
-        ],
-      },
-      {
-        title: "Property Sale Repatriation",
-        points: [
-          "Sale proceeds transfer",
-          "RBI approvals",
-          "Payment structuring",
-        ],
-      },
-      {
-        title: "Inward Remittance",
-        points: [
-          "Funds to India",
-          "FEMA compliance",
-          "Tax advisory",
-        ],
-      },
-      {
-        title: "Bank Coordination",
-        points: [
-          "Follow-ups",
-          "Approvals",
-          "Issue resolution",
-        ],
-      },
-      {
-        title: "Risk-Free Transfers",
-        points: [
-          "100% compliance",
-          "No penalties",
-          "Transparent process",
-        ],
-      },
-      {
-        title: "Remote Handling",
-        points: [
-          "End-to-end remote",
-          "Secure documents",
-          "Real-time updates",
-        ],
-      },
-    ],
-  },
+  "id": "nri-tax-filing",
+  "title": "NRI Tax Filing & End-to-End Financial Compliance",
+  "shortDescription": "Comprehensive tax filing, compliance, and fund repatriation services for NRIs.",
+  "image": "service-registration",
+  "description": "We provide complete NRI tax filing, compliance, and fund repatriation services with full transparency, accuracy, and regulatory alignment.",
+  "taxServices": [
+    {
+      "title": "Income Tax Return (ITR) Filing",
+      "points": [
+        "Accurate ITR filing for NRI individuals",
+        "Handling multiple income sources (rent, capital gains, interest)",
+        "Compliance with latest Indian tax regulations"
+      ]
+    },
+    {
+      "title": "Rental Income Tax Management",
+      "points": [
+        "Tax computation & deduction optimization (Standard Deduction, Interest)",
+        "TDS compliance, reconciliation & adjustments",
+        "Strategic rental income tax planning"
+      ]
+    },
+    {
+      "title": "Capital Gains Tax Advisory",
+      "points": [
+        "Tax calculation on property sale (Short-term & Long-term)",
+        "Guidance on reinvestment benefits (Tax saving options)",
+        "Capital gains documentation and filing"
+      ]
+    },
+    {
+      "title": "TDS Compliance & Refunds",
+      "points": [
+        "TDS verification and reconciliation support",
+        "Assistance with Lower or Nil TDS certificates",
+        "Efficient claiming and processing of tax refunds"
+      ]
+    },
+    {
+      "title": "Double Taxation Relief (DTAA)",
+      "points": [
+        "Advisory on avoiding double taxation for global income",
+        "Application of DTAA benefits to minimize liability",
+        "Foreign income reporting and compliance guidance"
+      ]
+    },
+    {
+      "title": "Tax Planning & Optimization",
+      "points": [
+        "Strategic tax planning and investment structuring",
+        "Year-round advisory and compliance support",
+        "Maximizing tax efficiency for NRI assets"
+      ]
+    },
+    {
+      "title": "Notice Handling & Representation",
+      "points": [
+        "Responding to Income Tax notices with drafted replies",
+        "Liaison with tax authorities for case resolution",
+        "Representation for scrutiny and assessments"
+      ]
+    },
+    {
+      "title": "Documentation & Compliance Support",
+      "points": [
+        "PAN & Aadhaar linkage and compliance guidance",
+        "NRO/NRE account bank compliance",
+        "End-to-end management of all required paperwork"
+      ]
+    },
+    {
+      "title": "Remote Tax Filing Capability",
+      "points": [
+        "Fully remote processing and document collection",
+        "Secure digital communication and processing",
+        "Real-time timely updates on filing status"
+      ]
+    }
+  ],
+  "repatriationServices": [
+    {
+      "title": "End-to-End Fund Repatriation",
+      "points": [
+        "Bilateral transfers (India ⇄ USA) with full compliance",
+        "Coordination with banks and financial institutions",
+        "Step-by-step guidance on remittance procedures"
+      ]
+    },
+    {
+      "title": "NRO → NRE Transfer (Outward)",
+      "points": [
+        "Annual repatriation limit management (USD 1 Million)",
+        "Transfer of funds between domestic and external accounts",
+        "Bank processing and documentation support"
+      ]
+    },
+    {
+      "title": "Form 15CA & 15CB Compliance",
+      "points": [
+        "Preparation and filing of online Form 15CA",
+        "Chartered Accountant (CA) certification (Form 15CB)",
+        "Tax compliance verification before remittance"
+      ]
+    },
+    {
+      "title": "FEMA & LRS Advisory",
+      "points": [
+        "Compliance with Foreign Exchange Management Act (FEMA)",
+        "Guidance under Liberalised Remittance Scheme (LRS)",
+        "Structuring transfers within legal frameworks"
+      ]
+    },
+    {
+      "title": "Property Sale Repatriation",
+      "points": [
+        "Repatriation of property sale proceeds from India",
+        "RBI compliance and necessary approvals",
+        "Handling buyer payments & transfer structuring"
+      ]
+    },
+    {
+      "title": "Tax Clearance for Remittance",
+      "points": [
+        "Capital gains compliance verification",
+        "TDS verification before global fund movement",
+        "End-to-end documentation for tax clearance"
+      ]
+    },
+    {
+      "title": "Inward Remittance (USA → India)",
+      "points": [
+        "Receiving funds into NRE/NRO accounts",
+        "Purpose code & FEMA compliance support",
+        "Advisory on taxation of inward transfers"
+      ]
+    },
+    {
+      "title": "Bank Coordination & Processing",
+      "points": [
+        "Liaison with banks for faster approvals",
+        "Follow-ups to resolve documentation gaps",
+        "Handling queries from financial institutions"
+      ]
+    },
+    {
+      "title": "Risk-Free Compliance Review",
+      "points": [
+        "Ensuring 100% legal compliance to avoid penalties",
+        "Structured and transparent transfer process",
+        "Prevention of delays via proactive monitoring"
+      ]
+    },
+    {
+      "title": "Remote Handling & Reporting",
+      "points": [
+        "Complete remote execution and secure document upload",
+        "Real-time status tracking of remittance",
+        "Comprehensive digital reporting and updates"
+      ]
+    }
+  ]
+},
   {
     id: "elderly-support",
     title: "Senior Citizen Property Support",

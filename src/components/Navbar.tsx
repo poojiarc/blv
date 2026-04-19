@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Info, User, Wrench, MessageSquare, Phone, Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const navItems = [
   { label: "Home", path: "/", icon: Home },
@@ -112,20 +113,44 @@ const Navbar = () => {
         </div>
 
         {/* Right: CTA + Mobile toggle */}
-        <div className="flex items-center gap-3">
-          <Link
-            to="/contact"
-            className="hidden md:inline-block bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
-          >
-            Get in Touch
-          </Link>
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-2"
-          >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
+        <div className="flex items-center gap-4">
+
+  {/* ✅ Social Icons */}
+  <a
+    href="https://wa.me/919966799225"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-white transition-colors"
+  >
+    <FaWhatsapp className="h-5 w-5" />
+  </a>
+
+  <a
+    href="https://www.instagram.com/blvglobalnri/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 hover:text-white transition-colors"
+  >
+    <FaInstagram className="h-5 w-5" />
+  </a>
+
+  {/* CTA */}
+  <Link
+    to="/contact"
+    className="hidden md:inline-block bg-white text-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
+  >
+    Get in Touch
+  </Link>
+
+  {/* Mobile Toggle */}
+  <button
+    onClick={() => setMobileOpen(!mobileOpen)}
+    className="lg:hidden text-white p-2"
+  >
+    {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+  </button>
+
+</div>
       </div>
 
       {/* Mobile Nav */}
