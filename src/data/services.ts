@@ -2514,76 +2514,106 @@ export const services: ServiceData[] = [
     ],
   },
   {
-    id: "property-management",
-    title: "Advanced NRI Property Management & Asset Oversight",
-    shortDescription: "Institutional-grade asset management focused on performance and protection.",
-    image: "service-property",
-    description: "We deliver advanced property management solutions combining technology, analytics, and on-ground execution for long-term wealth growth.",
-    wealthSections: [
-  {
-    title: "Asset Performance Analytics",
-    points: [
-      "ROI tracking",
-      "Performance reports",
-      "Market benchmarking",
-      "Actionable insights",
-    ],
-  },
-  {
-    title: "Smart Property Monitoring",
-    points: [
-      "CCTV integration",
-      "Remote dashboards",
-      "Real-time alerts",
-      "24/7 monitoring",
-    ],
-  },
-  {
-    title: "Revenue Maximization",
-    points: [
-      "Rental strategy",
-      "Dynamic pricing",
-      "Vacancy reduction",
-      "Income growth",
-    ],
-  },
-  {
-    title: "Value Enhancement",
-    points: [
-      "Renovation planning",
-      "CapEx budgeting",
-      "Execution support",
-      "Value improvements",
-    ],
-  },
-  {
-    title: "Risk & Compliance Intelligence",
-    points: [
-      "Legal monitoring",
-      "Compliance alerts",
-      "Risk flags",
-      "Preventive actions",
-    ],
-  },
-  {
-    title: "Portfolio Strategy",
-    points: [
-      "Asset rebalancing",
-      "Buy/sell strategy",
-      "Diversification",
-      "Wealth optimization",
-    ],
-  },
-  {
-    title: "Exit Strategy",
-    points: [
-      "Pre-sale preparation",
-      "Market timing",
-      "Premium positioning",
-      "Maximized returns",
-    ],
-  },
-],
-    powerLine: "Advanced property management and asset oversight—focused on performance, protection, and long-term wealth growth.",
-  },
+  id: "advanced-property-management",
+  title: "Advanced NRI Property Management & Asset Oversight",
+  shortDescription: "Institutional-grade asset management focused on performance and protection.",
+  image: "service-property",
+  description: "We deliver advanced property management solutions combining technology, analytics, and on-ground execution for long-term wealth growth.",
+
+  wealthSections: [
+    {
+      title: "Asset Performance Analytics & Optimization",
+      points: [
+        "ROI, yield & appreciation tracking",
+        "Property-wise performance reports",
+        "Market benchmarking",
+        "Actionable recommendations (upgrade / lease / sell)",
+      ],
+    },
+    {
+      title: "Smart Property Monitoring & Automation",
+      points: [
+        "CCTV + remote access integration",
+        "Smart locks / sensor alerts",
+        "Real-time monitoring dashboards",
+        "Incident alerts (intrusion, leaks, etc.)",
+      ],
+    },
+    {
+      title: "Vacancy Strategy & Revenue Maximization",
+      points: [
+        "Rental staging & furnishing advisory",
+        "Short-term vs long-term rental strategy",
+        "Dynamic pricing guidance",
+        "Vacancy reduction & income optimization",
+      ],
+    },
+    {
+      title: "CapEx Planning & Value Enhancement",
+      points: [
+        "Upgrade & renovation planning",
+        "ROI-focused budgeting",
+        "Execution & contractor supervision",
+        "Pre-sale / pre-lease improvements",
+      ],
+    },
+    {
+      title: "Risk & Compliance Intelligence",
+      points: [
+        "Continuous legal monitoring",
+        "Compliance & renewal alerts",
+        "Risk flags (disputes, dues, encroachments)",
+        "Preventive action planning",
+      ],
+    },
+    {
+      title: "Portfolio Strategy & Rebalancing",
+      points: [
+        "Underperforming asset identification",
+        "Buy / hold / sell recommendations",
+        "Portfolio rebalancing",
+        "Diversification strategies",
+      ],
+    },
+    {
+      title: "Tenant & Lease Structuring",
+      points: [
+        "Corporate tenant acquisition",
+        "Long-term lease structuring",
+        "Lock-in & escalation clauses",
+        "Rental security optimization",
+      ],
+    },
+    {
+      title: "Exit Strategy Engineering",
+      points: [
+        "Pre-sale property preparation",
+        "Market timing strategy",
+        "Legal & documentation readiness",
+        "Premium buyer positioning",
+      ],
+    },
+    {
+      title: "Integrated Financial Oversight",
+      points: [
+        "Income + tax + reinvestment tracking",
+        "Fund flow visibility",
+        "Property-financial integration",
+        "Wealth growth mapping",
+      ],
+    },
+    {
+      title: "Family Office-Style Representation",
+      points: [
+        "Dedicated relationship manager",
+        "Handling all India-side operations",
+        "Coordination with CA, lawyers, banks",
+        "Single point of contact for family",
+      ],
+    },
+  ],
+
+  powerLine:
+    "Advanced property management and asset oversight—focused on performance, protection, and long-term wealth growth.",
+}
 ];
