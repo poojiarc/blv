@@ -1209,7 +1209,7 @@ export const services: ServiceData[] = [
         points: [
           "Stamp duty & adjudication process",
           "Registration at Sub-Registrar office",
-          "State-specific compliance handling(TELANGANA, ANDHRA PRADESH & KARNATAKA)",
+          "State-specific compliance handling (TELANGANA, ANDHRA PRADESH & KARNATAKA)",
           "Complete on-ground execution",
         ],
       },
