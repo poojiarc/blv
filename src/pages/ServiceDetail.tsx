@@ -464,7 +464,75 @@ const ServiceDetail = () => {
                 </div>
               </>
             )}
+                        {/* POA TYPES SECTION */}
+            {service.poaTypes && (
+              <>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
+                  Types of Power of Attorney
+                </h3>
 
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  {service.poaTypes.map((section) => (
+                    <div
+                      key={section.title}
+                      className="p-4 rounded-lg bg-muted/50 h-full flex flex-col"
+                    >
+                      <h4 className="font-semibold text-foreground mb-4">
+                        {section.title}
+                      </h4>
+                      <ul className="space-y-3 flex-grow">
+                        {section.points.map((point) => (
+                          <li key={point} className="flex items-start gap-3">
+                            <CheckCircle className="h-5 w-5 text-gold flex-shrink-0 mt-0.5" />
+                            {formatPoint(point)}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                {service.poaTypesPowerLine && (
+                  <div className="mb-10 p-6 bg-gold/10 border border-gold/20 rounded-xl text-center">
+                    <p className="font-serif text-lg font-medium text-foreground">
+                      {service.poaTypesPowerLine}
+                    </p>
+                  </div>
+                )}
+
+                <hr className="my-10 border-gold/20" />
+              </>
+            )}
+
+            {/* POA MAIN SERVICES SECTION */}
+            {service.poaServices && (
+              <>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-6 text-center">
+                  Power of Attorney Services for NRIs (Real Estate & Legal)
+                </h3>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  {service.poaServices.map((section) => (
+                    <div
+                      key={section.title}
+                      className="p-4 rounded-lg bg-muted/50 h-full flex flex-col"
+                    >
+                      <h4 className="font-semibold text-foreground mb-4">
+                        {section.title}
+                      </h4>
+                      <ul className="space-y-3 flex-grow">
+                        {section.points.map((point) => (
+                          <li key={point} className="flex items-start gap-3">
+                            <CheckCircle className="h-5 w-5 text-gold flex-shrink-0 mt-0.5" />
+                            {formatPoint(point)}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
             {/* REPATRIATION SERVICES */}
             {service.repatriationServices && (
               <>
