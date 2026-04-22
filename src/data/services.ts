@@ -921,7 +921,7 @@ export interface ServiceData {
   repatriationServices?: ServiceSection[];
   documentSections?: ServiceSection[];
   virtualSections?: ServiceSection[];
-  wealthSections?: ServiceSection[];\
+  wealthSections?: ServiceSection[];
 
   poaTypes?: ServiceSection[];
   poaTypesPowerLine?: string;
