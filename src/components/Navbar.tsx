@@ -244,7 +244,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menus on route change
   useEffect(() => {
     setMobileOpen(false);
     setActiveDropdown(null);
@@ -252,7 +251,6 @@ const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Dynamically check if a parent item or any of its dropdown children are active
   const isItemActive = (item: any) => {
     if (isActive(item.path)) return true;
     if (item.dropdown && item.dropdown.some((sub: any) => isActive(sub.path))) return true;
@@ -262,7 +260,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 pt-4 sm:pt-6">
       <div
-        className={`liquid-glass rounded-xl px-4 py-2 flex items-center justify-between transition-all duration-300 ${
+        className={`liquid-glass rounded-xl px-4 py-3 flex items-center justify-between transition-all duration-300 ${
           scrolled ? "shadow-lg" : ""
         }`}
       >
@@ -279,14 +277,14 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Center: Nav Links (Hidden below 1024px) */}
-        <div className="hidden lg:flex items-center gap-5 xl:gap-8">
+        {/* Center: Nav Links */}
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 h-full">
           {navItems.map((item) => (
-            <div key={item.label} className="relative group">
+            <div key={item.label} className="relative group flex items-center h-full">
               {item.dropdown ? (
                 <>
                   <button
-                    className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 py-2 ${
+                    className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 outline-none ${
                       isItemActive(item) ? "text-white" : "text-gray-300 hover:text-white"
                     }`}
                   >
@@ -295,8 +293,8 @@ const Navbar = () => {
                     <ChevronDown className="h-3 w-3 group-hover:rotate-180 transition-transform duration-200" />
                   </button>
                   
-                  {/* CSS-Only Dropdown (Better performance, no layout jumps) */}
-                  <div className="absolute top-full left-0 mt-1 py-2 liquid-glass rounded-xl min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0">
+                  {/* Dropdown Menu */}
+                  <div className="absolute top-[120%] left-0 py-2 liquid-glass rounded-xl min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0">
                     {item.dropdown.map((sub) => (
                       <Link
                         key={sub.path}
@@ -314,7 +312,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.path}
-                  className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 py-2 ${
+                  className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 ${
                     isActive(item.path) ? "text-white" : "text-gray-300 hover:text-white"
                   }`}
                 >
@@ -328,12 +326,11 @@ const Navbar = () => {
 
         {/* Right: CTA + Socials + Mobile toggle */}
         <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
-          {/* Social Icons */}
           <a
             href="https://wa.me/919966799225"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white transition-colors"
+            className="text-gray-300 hover:text-white transition-colors flex items-center"
           >
             <FaWhatsapp className="h-4 w-4 sm:h-5 sm:w-5" />
           </a>
@@ -342,23 +339,21 @@ const Navbar = () => {
             href="https://www.instagram.com/blvglobalnri/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white transition-colors"
+            className="text-gray-300 hover:text-white transition-colors flex items-center"
           >
             <FaInstagram className="h-4 w-4 sm:h-5 sm:w-5" />
           </a>
 
-          {/* Top Bar CTA (Visible on md and up) */}
           <Link
             to="/contact"
-            className="hidden md:inline-block bg-white text-black px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
+            className="hidden md:flex items-center justify-center bg-white text-black px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
           >
             Get in Touch
           </Link>
 
-          {/* Mobile Toggle Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-1 sm:p-2"
+            className="lg:hidden text-white p-1 sm:p-2 flex items-center justify-center"
             aria-label="Toggle navigation"
           >
             {mobileOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
@@ -366,7 +361,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu (Visible below 1024px) */}
+      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden mt-2 liquid-glass rounded-xl py-4 overflow-hidden shadow-lg">
           {navItems.map((item) => (
@@ -375,7 +370,7 @@ const Navbar = () => {
                 <>
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                    className="flex items-center gap-2 w-full px-6 py-3 text-gray-300 text-sm font-medium hover:bg-white/5 transition-colors"
+                    className="flex items-center gap-2 w-full px-6 py-3 text-gray-300 text-sm font-medium hover:bg-white/5 transition-colors outline-none"
                   >
                     <item.icon className="h-4 w-4" />
                     {item.label}
@@ -386,7 +381,6 @@ const Navbar = () => {
                     />
                   </button>
                   
-                  {/* Expandable Mobile Submenu */}
                   {activeDropdown === item.label && (
                     <div className="bg-black/20 py-2">
                       {item.dropdown.map((sub) => (
@@ -418,11 +412,10 @@ const Navbar = () => {
             </div>
           ))}
           
-          {/* Mobile CTA (Hidden on md and up, as it already exists in the top bar) */}
           <div className="px-6 pt-4 md:hidden">
             <Link
               to="/contact"
-              className="block text-center bg-white text-black w-full px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
+              className="flex items-center justify-center bg-white text-black w-full px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
             >
               Get in Touch
             </Link>
