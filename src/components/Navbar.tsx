@@ -265,7 +265,7 @@ const Navbar = () => {
         }`}
       >
         {/* Left: Logo */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 flex-none">
           <img src={logo} alt="BLV Global" className="h-10 sm:h-11 w-auto rounded" />
           <div className="hidden sm:block">
             <span className="text-white font-semibold text-xs sm:text-sm leading-tight block tracking-tight whitespace-nowrap">
@@ -278,9 +278,10 @@ const Navbar = () => {
         </Link>
 
         {/* Center: Nav Links */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8 h-full">
+        {/* Removed flex-grow/justify-center to keep things tightly packed with gap */}
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navItems.map((item) => (
-            <div key={item.label} className="relative group flex items-center h-full">
+            <div key={item.label} className="relative group flex-none">
               {item.dropdown ? (
                 <>
                   <button
@@ -294,19 +295,22 @@ const Navbar = () => {
                   </button>
                   
                   {/* Dropdown Menu */}
-                  <div className="absolute top-[120%] left-0 py-2 liquid-glass rounded-xl min-w-[180px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0">
-                    {item.dropdown.map((sub) => (
-                      <Link
-                        key={sub.path}
-                        to={sub.path}
-                        className={`flex items-center gap-2 px-4 py-2.5 text-sm whitespace-nowrap transition-colors ${
-                          isActive(sub.path) ? "text-white bg-white/10" : "text-gray-300 hover:text-white hover:bg-white/5"
-                        }`}
-                      >
-                        <sub.icon className="h-3.5 w-3.5" />
-                        {sub.label}
-                      </Link>
-                    ))}
+                  {/* Added a transparent bridge to prevent hover loss when moving mouse down */}
+                  <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0">
+                    <div className="liquid-glass rounded-xl py-2 min-w-[180px]">
+                      {item.dropdown.map((sub) => (
+                        <Link
+                          key={sub.path}
+                          to={sub.path}
+                          className={`flex items-center gap-2 px-4 py-2.5 text-sm whitespace-nowrap transition-colors ${
+                            isActive(sub.path) ? "text-white bg-white/10" : "text-gray-300 hover:text-white hover:bg-white/5"
+                          }`}
+                        >
+                          <sub.icon className="h-3.5 w-3.5" />
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </>
               ) : (
@@ -325,7 +329,7 @@ const Navbar = () => {
         </div>
 
         {/* Right: CTA + Socials + Mobile toggle */}
-        <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+        <div className="flex items-center gap-3 sm:gap-4 flex-none">
           <a
             href="https://wa.me/919966799225"
             target="_blank"
