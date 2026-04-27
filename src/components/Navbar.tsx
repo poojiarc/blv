@@ -259,114 +259,126 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 pt-4 sm:pt-6">
-      {/* Removed overflow-hidden if it existed in custom classes, ensure liquid-glass allows overflow */}
-      <div
-        className={`liquid-glass rounded-xl px-4 py-3 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "shadow-lg" : ""
-        }`}
-      >
-        {/* Left: Logo */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-3 flex-none">
-          <img src={logo} alt="BLV Global" className="h-10 sm:h-11 w-auto rounded" />
-          <div className="hidden sm:block">
-            <span className="text-white font-semibold text-xs sm:text-sm leading-tight block tracking-tight whitespace-nowrap">
-              BLV GLOBAL NRI
-            </span>
-            <span className="text-gray-300 text-[10px] sm:text-xs font-medium leading-tight block whitespace-nowrap">
-              ASSET MANAGEMENT PVT. LTD.
-            </span>
-          </div>
-        </Link>
+      
+      {/* 
+        NEW STRUCTURE: We wrap everything in a relative div.
+        The liquid-glass effect is now isolated to a background element to prevent it from clipping the dropdown!
+      */}
+      <div className="relative w-full">
+        
+        {/* Background layer with glass effect */}
+        <div 
+          className={`absolute inset-0 liquid-glass rounded-xl pointer-events-none transition-all duration-300 ${
+            scrolled ? "shadow-lg" : ""
+          }`}
+        />
 
-        {/* Center: Nav Links */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-          {navItems.map((item) => (
-            <div key={item.label} className="relative group flex-none h-full flex items-center">
-              {item.dropdown ? (
-                <>
-                  <button
-                    className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 outline-none py-2 ${
-                      isItemActive(item) ? "text-white" : "text-gray-300 hover:text-white"
+        {/* Content layer (No overflow-hidden here!) */}
+        <div className="relative z-10 px-4 py-3 flex items-center justify-between">
+          
+          {/* Left: Logo */}
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 flex-none">
+            <img src={logo} alt="BLV Global" className="h-10 sm:h-11 w-auto rounded" />
+            <div className="hidden sm:block">
+              <span className="text-white font-semibold text-xs sm:text-sm leading-tight block tracking-tight whitespace-nowrap">
+                BLV GLOBAL NRI
+              </span>
+              <span className="text-gray-300 text-[10px] sm:text-xs font-medium leading-tight block whitespace-nowrap">
+                ASSET MANAGEMENT PVT. LTD.
+              </span>
+            </div>
+          </Link>
+
+          {/* Center: Nav Links */}
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {navItems.map((item) => (
+              <div key={item.label} className="relative group flex-none h-full flex items-center">
+                {item.dropdown ? (
+                  <>
+                    <button
+                      className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 outline-none py-2 ${
+                        isItemActive(item) ? "text-white" : "text-gray-300 hover:text-white"
+                      }`}
+                    >
+                      <item.icon className="h-3.5 w-3.5" />
+                      {item.label}
+                      <ChevronDown className="h-3 w-3 group-hover:rotate-180 transition-transform duration-200" />
+                    </button>
+                    
+                    {/* Dropdown Menu - Now completely unclipped */}
+                    <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0">
+                      <div className="liquid-glass rounded-xl py-2 min-w-[180px] shadow-xl border border-white/10">
+                        {item.dropdown.map((sub) => (
+                          <Link
+                            key={sub.path}
+                            to={sub.path}
+                            className={`flex items-center gap-2 px-4 py-2.5 text-sm whitespace-nowrap transition-colors ${
+                              isActive(sub.path) ? "text-white bg-white/10" : "text-gray-300 hover:text-white hover:bg-white/5"
+                            }`}
+                          >
+                            <sub.icon className="h-3.5 w-3.5" />
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 py-2 ${
+                      isActive(item.path) ? "text-white" : "text-gray-300 hover:text-white"
                     }`}
                   >
                     <item.icon className="h-3.5 w-3.5" />
                     {item.label}
-                    <ChevronDown className="h-3 w-3 group-hover:rotate-180 transition-transform duration-200" />
-                  </button>
-                  
-                  {/* Dropdown Menu - Added strict z-index and removed top-full offset for direct attachment */}
-                  <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0 z-[100]">
-                    <div className="liquid-glass rounded-xl py-2 min-w-[180px] shadow-xl border border-white/10">
-                      {item.dropdown.map((sub) => (
-                        <Link
-                          key={sub.path}
-                          to={sub.path}
-                          className={`flex items-center gap-2 px-4 py-2.5 text-sm whitespace-nowrap transition-colors ${
-                            isActive(sub.path) ? "text-white bg-white/10" : "text-gray-300 hover:text-white hover:bg-white/5"
-                          }`}
-                        >
-                          <sub.icon className="h-3.5 w-3.5" />
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <Link
-                  to={item.path}
-                  className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 py-2 ${
-                    isActive(item.path) ? "text-white" : "text-gray-300 hover:text-white"
-                  }`}
-                >
-                  <item.icon className="h-3.5 w-3.5" />
-                  {item.label}
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
 
-        {/* Right: CTA + Socials + Mobile toggle */}
-        <div className="flex items-center gap-3 sm:gap-4 flex-none">
-          <a
-            href="https://wa.me/919966799225"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white transition-colors flex items-center"
-          >
-            <FaWhatsapp className="h-4 w-4 sm:h-5 sm:w-5" />
-          </a>
+          {/* Right: CTA + Socials + Mobile toggle */}
+          <div className="flex items-center gap-3 sm:gap-4 flex-none">
+            <a
+              href="https://wa.me/919966799225"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors flex items-center"
+            >
+              <FaWhatsapp className="h-4 w-4 sm:h-5 sm:w-5" />
+            </a>
 
-          <a
-            href="https://www.instagram.com/blvglobalnri/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white transition-colors flex items-center"
-          >
-            <FaInstagram className="h-4 w-4 sm:h-5 sm:w-5" />
-          </a>
+            <a
+              href="https://www.instagram.com/blvglobalnri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors flex items-center"
+            >
+              <FaInstagram className="h-4 w-4 sm:h-5 sm:w-5" />
+            </a>
 
-          <Link
-            to="/contact"
-            className="hidden md:flex items-center justify-center bg-white text-black px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
-          >
-            Get in Touch
-          </Link>
+            <Link
+              to="/contact"
+              className="hidden md:flex items-center justify-center bg-white text-black px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
+            >
+              Get in Touch
+            </Link>
 
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-1 sm:p-2 flex items-center justify-center"
-            aria-label="Toggle navigation"
-          >
-            {mobileOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
-          </button>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden text-white p-1 sm:p-2 flex items-center justify-center"
+              aria-label="Toggle navigation"
+            >
+              {mobileOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden mt-2 liquid-glass rounded-xl py-4 overflow-hidden shadow-lg">
+        <div className="lg:hidden mt-2 liquid-glass rounded-xl py-4 overflow-hidden shadow-lg relative z-10">
           {navItems.map((item) => (
             <div key={item.label}>
               {item.dropdown ? (
