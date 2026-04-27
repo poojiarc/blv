@@ -1466,7 +1466,7 @@ export const services: ServiceData[] = [
           "Drone shots for layout & surroundings",
           "High-detail videos (lighting, space, finish)",
           "Close-up shots of defects",
-          "See beyond what agents or Agentss show",
+          "See beyond what agents show",
         ],
       },
       {
