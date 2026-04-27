@@ -259,21 +259,16 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 pt-4 sm:pt-6">
-      
-      {/* 
-        NEW STRUCTURE: We wrap everything in a relative div.
-        The liquid-glass effect is now isolated to a background element to prevent it from clipping the dropdown!
-      */}
       <div className="relative w-full">
         
-        {/* Background layer with glass effect */}
+        {/* Background layer with frosted glass blur effect */}
         <div 
-          className={`absolute inset-0 liquid-glass rounded-xl pointer-events-none transition-all duration-300 ${
-            scrolled ? "shadow-lg" : ""
+          className={`absolute inset-0 liquid-glass bg-black/40 backdrop-blur-md border border-white/10 rounded-xl pointer-events-none transition-all duration-300 ${
+            scrolled ? "shadow-lg shadow-black/20" : ""
           }`}
         />
 
-        {/* Content layer (No overflow-hidden here!) */}
+        {/* Content layer */}
         <div className="relative z-10 px-4 py-3 flex items-center justify-between">
           
           {/* Left: Logo */}
@@ -305,15 +300,15 @@ const Navbar = () => {
                       <ChevronDown className="h-3 w-3 group-hover:rotate-180 transition-transform duration-200" />
                     </button>
                     
-                    {/* Dropdown Menu - Now completely unclipped */}
+                    {/* Dropdown Menu - Added same blur effect here */}
                     <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0">
-                      <div className="liquid-glass rounded-xl py-2 min-w-[180px] shadow-xl border border-white/10">
+                      <div className="liquid-glass bg-black/40 backdrop-blur-md rounded-xl py-2 min-w-[180px] shadow-xl border border-white/10">
                         {item.dropdown.map((sub) => (
                           <Link
                             key={sub.path}
                             to={sub.path}
                             className={`flex items-center gap-2 px-4 py-2.5 text-sm whitespace-nowrap transition-colors ${
-                              isActive(sub.path) ? "text-white bg-white/10" : "text-gray-300 hover:text-white hover:bg-white/5"
+                              isActive(sub.path) ? "text-white bg-white/20" : "text-gray-300 hover:text-white hover:bg-white/10"
                             }`}
                           >
                             <sub.icon className="h-3.5 w-3.5" />
@@ -376,16 +371,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Added blur effect here too */}
       {mobileOpen && (
-        <div className="lg:hidden mt-2 liquid-glass rounded-xl py-4 overflow-hidden shadow-lg relative z-10">
+        <div className="lg:hidden mt-2 liquid-glass bg-black/40 backdrop-blur-md border border-white/10 rounded-xl py-4 overflow-hidden shadow-xl relative z-10">
           {navItems.map((item) => (
             <div key={item.label}>
               {item.dropdown ? (
                 <>
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                    className="flex items-center gap-2 w-full px-6 py-3 text-gray-300 text-sm font-medium hover:bg-white/5 transition-colors outline-none"
+                    className="flex items-center gap-2 w-full px-6 py-3 text-gray-300 text-sm font-medium hover:bg-white/10 transition-colors outline-none"
                   >
                     <item.icon className="h-4 w-4" />
                     {item.label}
@@ -403,7 +398,7 @@ const Navbar = () => {
                           key={sub.path}
                           to={sub.path}
                           className={`flex items-center gap-2 pl-12 pr-6 py-2.5 text-sm ${
-                            isActive(sub.path) ? "text-white" : "text-gray-400 hover:text-white"
+                            isActive(sub.path) ? "text-white" : "text-gray-400 hover:text-white hover:bg-white/5"
                           }`}
                         >
                           <sub.icon className="h-4 w-4" />
@@ -416,7 +411,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.path}
-                  className={`flex items-center gap-2 px-6 py-3 text-sm font-medium hover:bg-white/5 transition-colors ${
+                  className={`flex items-center gap-2 px-6 py-3 text-sm font-medium hover:bg-white/10 transition-colors ${
                     isActive(item.path) ? "text-white" : "text-gray-300 hover:text-white"
                   }`}
                 >
@@ -430,7 +425,7 @@ const Navbar = () => {
           <div className="px-6 pt-4 md:hidden">
             <Link
               to="/contact"
-              className="flex items-center justify-center bg-white text-black w-full px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
+              className="flex items-center justify-center bg-white text-black w-full px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
             >
               Get in Touch
             </Link>
