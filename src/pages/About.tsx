@@ -408,7 +408,8 @@ Your investments in India evolve into growth, strength, and enduring peace of mi
             </p>
 
             <p className="text-muted-foreground mb-6">
-              We do not follow commission-based Agentsage models. Our pricing reflects scope, legal responsibility, time involvement, and Professional accountability.
+              We do not follow commission-driven or percentage-based brokerage models.
+Instead, our fees reflect the scope of work, legal responsibility, time involvement, and professional accountability involved in managing NRI assets.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
