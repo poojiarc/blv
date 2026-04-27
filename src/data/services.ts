@@ -1845,7 +1845,7 @@ export const services: ServiceData[] = [
           "Continuous legal & documentation monitoring",
           "Alerts for tax, renewals, and legal updates",
           "Risk flags (encroachments, disputes, dues)",
-          "Preventive action planning to avoid legal shocks"
+          "Preventive action planning to avoid Legal/Financial uncertainty."
         ]
       },
       {
