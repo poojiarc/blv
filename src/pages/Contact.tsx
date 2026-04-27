@@ -307,7 +307,7 @@ const Contact = () => {
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
     // Create the WhatsApp link
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}&lang=en`
     
     // Open WhatsApp in a new tab
     window.open(whatsappLink, "_blank");
