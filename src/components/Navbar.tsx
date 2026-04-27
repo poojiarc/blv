@@ -259,6 +259,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 pt-4 sm:pt-6">
+      {/* Removed overflow-hidden if it existed in custom classes, ensure liquid-glass allows overflow */}
       <div
         className={`liquid-glass rounded-xl px-4 py-3 flex items-center justify-between transition-all duration-300 ${
           scrolled ? "shadow-lg" : ""
@@ -278,14 +279,13 @@ const Navbar = () => {
         </Link>
 
         {/* Center: Nav Links */}
-        {/* Removed flex-grow/justify-center to keep things tightly packed with gap */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navItems.map((item) => (
-            <div key={item.label} className="relative group flex-none">
+            <div key={item.label} className="relative group flex-none h-full flex items-center">
               {item.dropdown ? (
                 <>
                   <button
-                    className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 outline-none ${
+                    className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 outline-none py-2 ${
                       isItemActive(item) ? "text-white" : "text-gray-300 hover:text-white"
                     }`}
                   >
@@ -294,10 +294,9 @@ const Navbar = () => {
                     <ChevronDown className="h-3 w-3 group-hover:rotate-180 transition-transform duration-200" />
                   </button>
                   
-                  {/* Dropdown Menu */}
-                  {/* Added a transparent bridge to prevent hover loss when moving mouse down */}
-                  <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0">
-                    <div className="liquid-glass rounded-xl py-2 min-w-[180px]">
+                  {/* Dropdown Menu - Added strict z-index and removed top-full offset for direct attachment */}
+                  <div className="absolute top-[100%] left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0 z-[100]">
+                    <div className="liquid-glass rounded-xl py-2 min-w-[180px] shadow-xl border border-white/10">
                       {item.dropdown.map((sub) => (
                         <Link
                           key={sub.path}
@@ -316,7 +315,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.path}
-                  className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 ${
+                  className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors duration-200 py-2 ${
                     isActive(item.path) ? "text-white" : "text-gray-300 hover:text-white"
                   }`}
                 >
