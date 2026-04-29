@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 pt-6 text-center">
   
   {/* Made with section */}
-  <div className="flex justify-center items-center gap-1 text-sm text-primary-foreground/50 mb-2">
+  {/* <div className="flex justify-center items-center gap-1 text-sm text-primary-foreground/50 mb-2">
     Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" /> by
     <a
       href="https://staffarc.in"
@@ -84,7 +84,7 @@ const Footer = () => {
       />
       StaffArc
     </a>
-  </div>
+  </div> */}
 
   {/* Copyright */}
   <p className="text-xs text-primary-foreground/40">
